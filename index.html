@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Sikkim Expedition - 8 Days Plan</title>
+    <style>
+        :root {
+            --primary-bg: #0f172a;
+            --card-bg: #1e293b;
+            --accent-blue: #38bdf8;
+            --accent-green: #34d399;
+            --accent-yellow: #facc15;
+            --accent-pink: #f472b6;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0284c7 0%, #7e22ce 100%);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #e2e8f0;
+            margin: 0;
+        }
+
+        .badge-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .badge {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .day-card {
+            background-color: var(--card-bg);
+            border-left: 6px solid var(--accent-blue);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.2s ease;
+        }
+
+        .day-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .day-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .day-title h2 {
+            margin: 0;
+            color: var(--accent-blue);
+            font-size: 1.4rem;
+        }
+
+        .day-title .route {
+            background-color: #334155;
+            color: var(--accent-yellow);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .detail-box {
+            background-color: rgba(15, 23, 42, 0.6);
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+
+        .detail-box strong {
+            color: var(--accent-green);
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+        }
+
+        .highlight-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 10px 0 0 0;
+        }
+
+        .highlight-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+
+        .highlight-list li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--accent-pink);
+        }
+
+        /* Budget Section Styling */
+        .budget-section {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 40px;
+            border: 2px solid var(--accent-green);
+        }
+
+        .budget-section h2 {
+            color: var(--accent-green);
+            text-align: center;
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: rgba(15, 23, 42, 0.6);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #334155;
+        }
+
+        th {
+            background-color: #0f172a;
+            color: var(--accent-yellow);
+            font-weight: 600;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .total-row {
+            font-weight: bold;
+            background-color: #1e293b;
+            color: var(--accent-green);
+            font-size: 1.1rem;
+        }
+
+        .info-note {
+            background-color: rgba(250, 204, 21, 0.1);
+            border: 1px solid var(--accent-yellow);
+            color: var(--accent-yellow);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 25px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>⛰️ Ultimate North Sikkim Expedition</h1>
+        <p>8 Days Offbeat & Iconic Adventure Tour Plan</p>
+        <div class="badge-container">
+            <span class="badge">📍 From: Garia, Kolkata</span>
+            <span class="badge">👥 Group Size: 6 Persons</span>
+            <span class="badge">💰 Budget: ₹15,000 / Head</span>
+        </div>
+    </div>
+
+    <!-- Day 1 -->
+    <div class="day-card" style="border-left-color: #38bdf8;">
+        <div class="day-title">
+            <h2>Day 1: Departure from Kolkata</h2>
+            <span class="route">Garia ➔ Sealdah ➔ Overnight Train</span>
+        </div>
+        <p>Board an auto/metro from Garia to Sealdah Railway Station. Catch the 12377 Padatik Express (11:20 PM) or 12343 Darjeeling Mail (10:05 PM) heading towards New Jalpaiguri (NJP).</p>
+        <div class="details-grid">
+            <div class="detail-box">
+                <strong>🚂 Transport</strong>
+                Sleeper / 3AC Class Train (Reserve tickets 120 days prior).
+            </div>
+            <div class="detail-box">
+                <strong>🍿 Food & Snacks</strong>
+                Dinner packed from home or Sealdah station food court (Hot Kati Rolls / Thali).
+            </div>
+            <div class="detail-box">
+                <strong>🏡 Lodging</strong>
+                Overnight Train Journey.
+            </div>
+        </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day-card" style="border-left-color: #34d399;">
+        <div class="day-title">
+            <h2>Day 2: NJP to Gangtok & Local Exploration</h2>
+            <span class="route">NJP ➔ Gangtok (120 km / 4.5 hrs)</span>
+        </div>
+        <p>Reach NJP around 8:00 AM. Board a pre-booked reserved Bolero/Sumo to Gangtok. Check into your hotel, refresh, and visit Gangtok MG Marg in the evening for food and permit submissions.</p>
+        <div class="details-grid">
+            <div class="detail-box">
+                <strong>📍 Major Attractions</strong>
+                <ul class="highlight-list">
+                    <li>Teesta River View Point (En route)</li>
+                    <li>MG Marg Evening Walk</li>
+                    <li>Ganesh Tok (Sunset view)</li>
+                </ul>
+            </div>
+            <div class="detail-box">
+                <strong>🍴 Fooding & Snacks</strong>
+                Breakfast at Siliguri Junction; Dinner at Roll House / Nimtho (MG Marg) for authentic Sikkimese Thukpa & Momos.
+            </div>
+            <div class="detail-box">
+                <strong>🏨 Hotel Accommodation</strong>
+                Budget Stay near MG Marg / Development Area (e.g., Hotel Hill Point or similar).
+            </div>
+        </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="day-card" style="border-left-color: #facc15;">
+        <div class="day-title">
+            <h2>Day 3: Gangtok to Lachen (The Gateway to North)</h2>
+            <span class="route">Gangtok ➔ Lachen (120 km / 6 hrs)</span>
+        </div>
+        <p>Start early around 9:00 AM in a dedicated Mahindra Bolero/Sumo (Exclusive North Sikkim Permit vehicle). Drive through dramatic waterfalls and high mountain rivers.</p>
+        <div class="details-grid">
+            <div class="detail-box">
+                <strong>📍 Attractions & Offbeat Spots</strong>
+                <ul class="highlight-list">
+                    <li>Seven Sister Waterfalls</li>
+                    <li>Naga Waterfalls</li>
+                    <li>Chungthang Confluence (Teesta & Lachen River)</li>
+                    <li>Singhik Viewpoint (Kanchenjunga View)</li>
+                </ul>
+            </div>
+            <div class="detail-box">
+                <strong>🍴 Fooding</strong>
+                Lunch at Mangan local eatery (Simple Rice-Dal-Sabzi included in North Sikkim Package); Tea & Snacks at Chungthang.
+            </div>
+            <div class="detail-box">
+                <strong>🏡 Homestay / Lodging</strong>
+                Lachen Local Wooden Homestay (Includes Dinner: Veg/Non-Veg Thali).
+            </div>
+        </div>
+    </div>
+
+    <!-- Day 4 -->
+    <div class="day-card" style="border-left-color: #f472b6;">
+        <div class="day-title">
+            <h2>Day 4: Gurudongmar Lake, Kala Patthar & Reach Lachung</h2>
+            <span class="route">Lachen ➔ Gurudongmar ➔ Kala Patthar ➔ Lachung</span>
+        </div>
+        <p>Early morning departure at 4:00 AM. Ascend to one of the highest altitude lakes in the world through cold desert terrain of Thangu.</p>
+        <div class="details-grid">
+            <div class="detail-box">
+                <strong>📍 Highlights & Hidden Places</strong>
+                <ul class="highlight-list">
+                    <li><strong>Gurudongmar Lake (17,800 ft):</strong> Holy, crystal-blue lake.</li>
+                    <li><strong>Thangu Valley:</strong> Cold high-altitude village.</li>
+                    <li><strong>Kala Patthar (Hidden Gem):</strong> Snow-covered black mountains.</li>
+                    <li>Chopta Valley view.</li>
+                </ul>
+            </div>
+            <div class="detail-box">
+                <strong>🍴 Fooding & Snacks</strong>
+                Breakfast at Thangu (Hot Maggi, Butter Tea, Bread-Omelette); Lunch at Lachen homestay; Dinner at Lachung homestay.
+            </div>
+            <div class="detail-box">
+                <strong>🏡 Lodging</strong>
+                Traditional Wooden Hotel / Homestay at Lachung.
+            </div>
+        </div>
+    </div>
+
+    <!-- Day 5 -->
+    <div class="day-card" style="border-left-color: #a855f7;">
+        <div class="day-title">
+            <h2>Day 5: Yumthang Valley, Zero Point / Katao to Gangtok</h2>
+            <span class="route">Lachung ➔ Yumthang ➔ Zero Point ➔ Gangtok</span>
+        </div>
+        <p>Drive to the famous Valley of Flowers, explore high snow fields near the Indo-China border, and return back to Gangtok by evening.</p>
+        <div class="details-grid">
+            <div class="detail-box">
+                <strong>📍 Highlights & Hidden Places</strong>
+                <ul class="highlight-list">
+                    <li><strong>Yumthang Valley:</strong> Rhododendron sanctuary.</li>
+                    <li><strong>Zero Point (Yumesamdong - 15,300 ft):</strong> Permanent snow zone.</li>
+                    <li><strong>Mt. Katao (Offbeat Alternative):</strong> Scenic snow adventure point.</li>
+                    <li>Sikkim Hot Springs.</li>
+                </ul>
+            </div>
+            <div class="detail-box">
+                <strong>🍴 Fooding</strong>
+                Snacks at Yumthang market (Hot Momos & Tea); Late lunch at Phodong/Chungthang; Dinner at MG Marg, Gangtok.
+            </div>
+            <div class="detail-box">
+                <strong>🏨 Hotel Accommodation</strong>
+                Budget Stay in Gangtok.
+            </div>
+        </div>
+    </div>
+
+    <!-- Day 6 -->
+    <div class="day-card" style="border-left-color: #ec4899;">
+        <div class="day-title">
+            <h2>Day 6: Silk Route Extension / Offbeat Reshi & Aritar</h2>
+            <span class="route">Gangtok ➔ Tsomgo Lake ➔ Baba Mandir ➔ Gangtok</span>
+        </div>
+        <p>Day excursion to the high altitude glacial lake near the Indo-China border, followed by a visit to the historic shrine.</p>
+        <div class="details-grid">
+            <div class="detail-box">
+                <strong>📍 Major Attractions</strong>
+                <ul class="highlight-list">
+                    <li><strong>Tsomgo (Changu) Lake:</strong> Glacial alpine lake.</li>
+                    <li><strong>New Baba Harbhajan Singh Mandir</strong></li>
+                    <li><strong>Nathula Pass (Optional / Subject to permit cost)</strong></li>
+                </ul>
+            </div>
+            <div class="detail-box">
+                <strong>🍴 Fooding</strong>
+                Breakfast at Gangtok; Hot snacks (Soup, Maggi, Tibetan Bread) at Changu Market; Dinner at Gangtok local market.
+            </div>
+            <div class="detail-box">
+                <strong>🏨 Hotel Accommodation</strong>
+                Night stay at Gangtok.
+            </div>
+        </div>
+    </div>
+
+    <!-- Day 7 -->
+    <div class="day-card" style="border-left-color: #6366f1;">
+        <div class="day-title">
+            <h2>Day 7: Gangtok to NJP Station</h2>
+            <span class="route">Gangtok ➔ Namchi (Optional stop) ➔ NJP</span>
+        </div>
+        <p>Checkout from Gangtok by 10:00 AM. Drive back toward NJP via scenic Teesta valley. Catch the evening return train back to Kolkata (e.g., Padatik Express at 9:00 PM or Uttarbanga Express).</p>
+        <div class="details-grid">
+            <div class="detail-box">
+                <strong>📍 Sights En Route</strong>
+                Teesta Bazar, Coronation Bridge, and Souvenir shopping at Siliguri.
+            </div>
+            <div class="detail-box">
+                <strong>🍴 Fooding & Snacks</strong>
+                Lunch at Teesta Bazar (River-side dhaba); Dinner on train/packed from NJP station.
+            </div>
+            <div class="detail-box">
+                <strong>🚂 Transport</strong>
+                Reserved Bolero/Sumo from Gangtok to NJP + Overnight Train to Sealdah.
+            </div>
+        </div>
+    </div>
+
+    <!-- Day 8 -->
+    <div class="day-card" style="border-left-color: #64748b;">
+        <div class="day-title">
+            <h2>Day 8: Arrival in Kolkata (Garia)</h2>
+            <span class="route">Sealdah Station ➔ Garia</span>
+        </div>
+        <p>Reach Sealdah station early morning (~6:30 AM). Take a direct Metro or Auto back home to Garia with unforgettable memories of Sikkim!</p>
+    </div>
+
+    <!-- Cost Breakdown Section -->
+    <div class="budget-section">
+        <h2>💰 Comprehensive Costing Breakdown (For 6 People)</h2>
+        <p style="text-align: center; color: var(--text-muted);">Strictly calculated to fit within ₹15,000 per head (Total Budget: ₹90,000)</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Item Description</th>
+                    <th>Calculation Basis</th>
+                    <th>Total Group Cost (₹)</th>
+                    <th>Cost Per Head (₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Train Tickets (To & From)</strong></td>
+                    <td>Sleeper / 3AC (NJP ↔ Sealdah Round trip)</td>
+                    <td>₹7,200</td>
+                    <td>₹1,200</td>
+                </tr>
+                <tr>
+                    <td><strong>NJP ↔ Gangtok Reserved Cab</strong></td>
+                    <td>Bolero / Sumo shared by 6 (Round Trip)</td>
+                    <td>₹11,000</td>
+                    <td>₹1,833</td>
+                </tr>
+                <tr>
+                    <td><strong>North Sikkim 3D/2N Package</strong></td>
+                    <td>Includes Reserved Vehicle, Permits, Accommodation & Meals (Lachen & Lachung)</td>
+                    <td>₹36,000</td>
+                    <td>₹6,000</td>
+                </tr>
+                <tr>
+                    <td><strong>Extra Sightseeing (Zero Point / Kala Patthar)</strong></td>
+                    <td>Driver direct booking tip/charge for snow points</td>
+                    <td>₹6,000</td>
+                    <td>₹1,000</td>
+                </tr>
+                <tr>
+                    <td><strong>Gangtok Hotel Stay</strong></td>
+                    <td>3 Nights in Gangtok (2 Triple Sharing Rooms)</td>
+                    <td>₹12,000</td>
+                    <td>₹2,000</td>
+                </tr>
+                <tr>
+                    <td><strong>Food & Snacks (Non-Package Days)</strong></td>
+                    <td>Meals in Gangtok, NJP, Train & Snacks allowance</td>
+                    <td>₹12,000</td>
+                    <td>₹2,000</td>
+                </tr>
+                <tr>
+                    <td><strong>Local Transit, Auto (Garia) & Permits</strong></td>
+                    <td>Miscellaneous, auto fare, pass photos, eco-fees</td>
+                    <td>₹5,800</td>
+                    <td>₹967</td>
+                </tr>
+                <tr class="total-row">
+                    <td>GRAND TOTAL</td>
+                    <td>All inclusive per person estimate</td>
+                    <td>₹90,000</td>
+                    <td>₹15,000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="info-note">
+            📌 <strong>Important Travel Notes:</strong>
+            <ul>
+                <li><strong>Documents Needed:</strong> Carry 6 passport-size photographs each and original Voter ID / Passport (Aadhaar is sometimes restricted for North Sikkim permits).</li>
+                <li><strong>Altitude sickness precaution:</strong> Keep Camphor sachets, Diamox tablets, and warm thermals handy for Gurudongmar Lake (17,800 ft).</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
