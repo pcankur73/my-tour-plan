@@ -3,528 +3,417 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pune • Vizag • Araku • Borra Caves • Pune — Detailed Tour Plan</title>
+<title>Kolkata – Vizag – Araku – Borra Caves – Kolkata | 22–26 October 2026</title>
 <style>
-  :root{
-    --ink:#172033; --muted:#5f6b7a; --paper:#fffdf8; --card:#ffffff;
-    --a:#ff5a5f; --b:#ffb703; --c:#00a6a6; --d:#4361ee; --e:#8338ec;
-    --line:#e6e9ef; --good:#087f5b; --warn:#a15c00;
-  }
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    margin:0;background:#eef2f7;color:var(--ink);
-    font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
-    line-height:1.55;
-  }
-  .page{
-    width:min(1180px,94vw);margin:24px auto;background:var(--paper);
-    box-shadow:0 20px 60px rgba(23,32,51,.13);border-radius:24px;overflow:hidden;
-  }
-  .hero{
-    min-height:430px;padding:56px 62px;position:relative;color:#fff;overflow:hidden;
-    background:
-      radial-gradient(circle at 10% 20%,rgba(255,255,255,.22),transparent 25%),
-      radial-gradient(circle at 88% 15%,rgba(255,183,3,.35),transparent 28%),
-      linear-gradient(135deg,#3726a7 0%,#4361ee 42%,#00a6a6 72%,#ff8c42 100%);
-  }
-  .hero:after{
-    content:"";position:absolute;width:520px;height:520px;border:80px solid rgba(255,255,255,.08);
-    border-radius:50%;right:-180px;bottom:-260px;
-  }
-  .eyebrow{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:13px;opacity:.9}
-  h1{font-size:clamp(38px,6vw,70px);line-height:.98;margin:18px 0 18px;max-width:900px;letter-spacing:-.045em}
-  .hero p{font-size:20px;max-width:850px;margin:0 0 26px}
-  .chips{display:flex;gap:10px;flex-wrap:wrap}
-  .chip{padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);font-weight:700}
-  .section{padding:44px 58px;border-top:1px solid var(--line)}
-  .section h2{font-size:32px;line-height:1.1;margin:0 0 10px}
-  .section h3{font-size:21px;margin:26px 0 10px}
-  .lead{font-size:17px;color:var(--muted);max-width:920px}
-  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-  .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-  .card{
-    background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;
-    box-shadow:0 8px 24px rgba(23,32,51,.06);
-  }
-  .accent-a{border-top:5px solid var(--a)} .accent-b{border-top:5px solid var(--b)}
-  .accent-c{border-top:5px solid var(--c)} .accent-d{border-top:5px solid var(--d)}
-  .accent-e{border-top:5px solid var(--e)}
-  .stat{font-size:30px;font-weight:900;margin:2px 0}
-  .small{font-size:13px;color:var(--muted)}
-  table{width:100%;border-collapse:separate;border-spacing:0;margin:16px 0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
-  th,td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
-  th{background:#f4f7fb;font-size:13px;text-transform:uppercase;letter-spacing:.04em}
-  tr:last-child td{border-bottom:0}
-  .money{font-weight:850;white-space:nowrap}
-  .route{
-    display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin:28px 0 8px;
-  }
-  .route .stop{position:relative;text-align:center;padding-top:28px}
-  .route .stop:before{content:"";position:absolute;top:8px;left:50%;width:100%;height:5px;background:linear-gradient(90deg,var(--a),var(--b),var(--c),var(--d),var(--e));}
-  .route .stop:first-child:before{left:50%;width:50%}
-  .route .stop:last-child:before{left:0;width:50%}
-  .dot{position:absolute;top:0;left:calc(50% - 10px);width:20px;height:20px;border-radius:50%;background:#fff;border:6px solid var(--d);z-index:2}
-  .stop strong{display:block}
-  .timeline{display:grid;gap:16px}
-  .day{
-    display:grid;grid-template-columns:145px 1fr;gap:20px;padding:20px;border:1px solid var(--line);
-    border-radius:18px;background:#fff;box-shadow:0 7px 20px rgba(23,32,51,.05);
-  }
-  .datebox{border-radius:14px;padding:15px;background:linear-gradient(135deg,#eef1ff,#f6f7ff);height:max-content;text-align:center}
-  .datebox b{display:block;font-size:24px}.datebox span{font-size:12px;color:var(--muted);font-weight:800;text-transform:uppercase}
-  .day h3{margin:0 0 7px}
-  .pill{display:inline-block;border-radius:999px;padding:5px 9px;font-size:12px;font-weight:800;background:#edf7f5;color:var(--good);margin:3px 4px 3px 0}
-  ul{margin:8px 0 8px 20px;padding:0}
-  li{margin:4px 0}
-  .bar{height:16px;background:#edf0f4;border-radius:999px;overflow:hidden}
-  .bar span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--d),var(--c))}
-  .budget-total{font-size:42px;font-weight:950;letter-spacing:-.04em}
-  .budget-row{display:grid;grid-template-columns:190px 1fr 100px;gap:14px;align-items:center;margin:12px 0}
-  .note{padding:14px 16px;border-left:5px solid var(--b);background:#fff8e7;border-radius:10px;color:#654000}
-  .good{padding:14px 16px;border-left:5px solid var(--c);background:#eaf9f6;border-radius:10px;color:#075e4b}
-  .warn{padding:14px 16px;border-left:5px solid var(--a);background:#fff0f1;border-radius:10px;color:#8d3034}
-  .contact a,.source a{color:#2453d4;text-decoration:none;font-weight:700}
-  .contact a:hover,.source a:hover{text-decoration:underline}
-  .footer{padding:34px 58px;background:#131a2a;color:#e7ebf5}
-  .footer a{color:#aebfff}
-  .source{font-size:12px;color:#667085;margin:7px 0}
-  .source strong{color:#344054}
-  .toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
-  .toc a{padding:8px 11px;border-radius:999px;background:#f0f3fa;color:#31446e;text-decoration:none;font-size:13px;font-weight:800}
-  .kpi{font-size:13px;color:var(--muted);margin-top:2px}
-  .nowrap{white-space:nowrap}
-  @media(max-width:800px){
-    .hero,.section,.footer{padding:32px 22px}
-    .grid,.grid3{grid-template-columns:1fr}
-    .day{grid-template-columns:1fr}
-    .route{grid-template-columns:1fr;gap:14px}.route .stop:before{display:none}.dot{display:none}
-    .budget-row{grid-template-columns:1fr 1fr}
-    .budget-row .bar{grid-column:1/-1;grid-row:2}
-  }
-  @media print{
-    body{background:#fff}
-    .page{width:100%;margin:0;box-shadow:none;border-radius:0}
-    .section,.hero,.footer{break-inside:avoid}
-    .pagebreak{break-before:page}
-    a{color:inherit;text-decoration:none}
-  }
+:root{
+  --ink:#172033;--muted:#5d687a;--paper:#fffdf8;--panel:#ffffff;
+  --a:#ff5f6d;--b:#ffc371;--c:#36d1dc;--d:#5b86e5;--e:#8e54e9;
+  --line:#e7e1d8;--good:#0f9d78;--warn:#a45a00;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:linear-gradient(135deg,#fff7ec 0%,#eefaff 45%,#f8f0ff 100%);
+  color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.55;
+}
+.page{max-width:1180px;margin:28px auto;padding:0 22px}
+.hero{
+  position:relative;overflow:hidden;border-radius:28px;padding:46px 42px;
+  color:#fff;background:linear-gradient(120deg,#ff5f6d,#ff9966 38%,#5b86e5 72%,#8e54e9);
+  box-shadow:0 24px 60px rgba(52,48,80,.20);
+}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(2px);opacity:.25}
+.hero:before{width:300px;height:300px;background:#fff;right:-110px;top:-130px}
+.hero:after{width:220px;height:220px;background:#ffd36e;left:-90px;bottom:-120px}
+.hero>*{position:relative;z-index:2}
+.kicker{font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:800;opacity:.92}
+h1{font-size:46px;line-height:1.06;margin:10px 0 15px;max-width:850px}
+.hero p{font-size:18px;max-width:850px;margin:8px 0}
+.badges{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.badge{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.38);padding:8px 13px;border-radius:999px;font-weight:700}
+.section{margin-top:24px}
+.section-title{font-size:26px;margin:0 0 13px}
+.card{
+  background:rgba(255,255,255,.92);border:1px solid rgba(231,225,216,.9);
+  border-radius:20px;padding:22px;box-shadow:0 10px 30px rgba(41,50,70,.08);
+}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.metric{padding:20px;border-radius:18px;background:linear-gradient(135deg,#fff,#f7fbff);border-left:6px solid var(--c)}
+.metric strong{display:block;font-size:28px;margin-top:4px}
+.metric small{color:var(--muted)}
+table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border:1px solid var(--line);border-radius:14px;background:#fff}
+th,td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#f4f6fb;text-align:left;font-size:13px;text-transform:uppercase;letter-spacing:.5px}
+tr:last-child td{border-bottom:0}
+.amount{font-weight:800;white-space:nowrap}
+.note{background:#fff8df;border:1px solid #f0d18a;border-left:5px solid #f0a51a;padding:14px 16px;border-radius:12px}
+.ok{background:#eafaf5;border:1px solid #b9eadb;border-left:5px solid var(--good);padding:14px 16px;border-radius:12px}
+.warn{background:#fff1ed;border:1px solid #ffc4b6;border-left:5px solid var(--a);padding:14px 16px;border-radius:12px}
+.day{
+  border-radius:22px;padding:24px;background:#fff;border:1px solid var(--line);
+  box-shadow:0 12px 28px rgba(41,50,70,.07);margin-bottom:18px;
+}
+.dayhead{display:flex;align-items:center;gap:14px;margin-bottom:15px}
+.daynum{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;color:#fff;font-weight:900;background:linear-gradient(135deg,var(--d),var(--e));font-size:20px}
+.day h3{margin:0;font-size:23px}
+.timeline{border-left:3px solid #d9e4ff;margin-left:18px;padding-left:22px}
+.slot{position:relative;margin:0 0 17px}
+.slot:before{content:"";position:absolute;width:11px;height:11px;border-radius:50%;background:var(--c);left:-30px;top:7px;box-shadow:0 0 0 5px #e8fbfd}
+.time{font-weight:900;color:#3854a4}
+ul{margin:8px 0 8px 20px;padding:0}
+li{margin:5px 0}
+.contact{
+  background:linear-gradient(135deg,#ffffff,#f7f7ff);border:1px solid var(--line);
+  border-radius:18px;padding:19px
+}
+.contact h3{margin:0 0 8px;color:#3d4e9d}
+.contact .phone{font-weight:900;font-size:18px;color:#0d7c67}
+a{color:#3057b7;text-decoration:none;font-weight:700}
+a:hover{text-decoration:underline}
+.total{
+  background:linear-gradient(135deg,#162447,#3f2c7c);color:#fff;border-radius:22px;padding:24px;
+  box-shadow:0 18px 38px rgba(35,34,90,.25)
+}
+.total h3{margin:0 0 10px;font-size:24px}
+.total .big{font-size:40px;font-weight:900}
+.bar{height:15px;border-radius:99px;background:#e8ebf3;overflow:hidden;margin:7px 0 15px}
+.fill{height:100%;border-radius:99px;background:linear-gradient(90deg,#36d1dc,#5b86e5,#8e54e9)}
+.small{font-size:13px;color:var(--muted)}
+.hero .small{color:rgba(255,255,255,.86)}
+.footer{font-size:12px;color:#657083;text-align:center;padding:20px 5px}
+.print-break{break-before:page;page-break-before:always}
+svg{max-width:100%;height:auto}
+@media(max-width:850px){.grid,.grid2{grid-template-columns:1fr}h1{font-size:36px}.hero{padding:34px 25px}.page{padding:0 12px}}
+@media print{
+  body{background:#fff}.page{max-width:none;margin:0;padding:0 10mm}
+  .hero{box-shadow:none;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  .card,.day,.contact,.total{box-shadow:none}
+  .print-break{break-before:page;page-break-before:always}
+  a{color:#234a9a}
+}
 </style>
 </head>
 <body>
 <div class="page">
 
-<header class="hero">
-  <div class="eyebrow">17 October 2026 — 25 October 2026 • 3 Adults • Very-Low-Budget Plan</div>
-  <h1>Pune → Vizag → Araku → Borra Caves → Pune</h1>
-  <p>A carefully sequenced 9-calendar-day journey built around 1A trains, economical hotels, local transport, AC-bus options, four daily food stops and a practical contingency allowance.</p>
-  <div class="chips">
-    <span class="chip">3 Adults</span><span class="chip">1A Train</span><span class="chip">Vizag</span>
-    <span class="chip">Araku Valley</span><span class="chip">Borra Caves</span><span class="chip">Target ₹55–57k</span>
+<section class="hero">
+  <div class="kicker">5-Day / 4-Night Journey • 3 Adults • Low-Cost Comfort</div>
+  <h1>Kolkata → Visakhapatnam → Araku → Borra Caves → Kolkata</h1>
+  <p><strong>22 October 2026 to 26 October 2026</strong> · Second AC train travel · budget hotels · economical meals · local car for hill sightseeing · public-bus fallback options.</p>
+  <div class="badges">
+    <span class="badge">3 Adults</span><span class="badge">2A Train</span><span class="badge">2 Hotel Nights</span>
+    <span class="badge">Araku Valley</span><span class="badge">Borra Caves</span><span class="badge">Budget First</span>
   </div>
-</header>
-
-<section class="section" id="overview">
-  <h2>Trip Snapshot</h2>
-  <p class="lead">The lowest-cost sensible structure is to use the daily 1A Pune–Visakhapatnam and Visakhapatnam–Pune services, stay near the railway station, use a compact AC car only where it saves multiple transfers, use a local Araku sightseeing cab for the hill circuit, and return to Vizag before the overnight train.</p>
-  <div class="route">
-    <div class="stop"><span class="dot"></span><strong>Pune</strong><small>17 Oct</small></div>
-    <div class="stop"><span class="dot"></span><strong>Visakhapatnam</strong><small>18–19 Oct</small></div>
-    <div class="stop"><span class="dot"></span><strong>Borra Caves</strong><small>19 Oct</small></div>
-    <div class="stop"><span class="dot"></span><strong>Araku</strong><small>19–21 Oct</small></div>
-    <div class="stop"><span class="dot"></span><strong>Pune</strong><small>24 Oct</small></div>
-  </div>
-  <div class="grid3">
-    <div class="card accent-a"><div class="small">Outbound 1A</div><div class="stat">₹3,845 pp</div><div class="kpi">18520 • Pune 10:20 → Vizag 10:50 next day</div></div>
-    <div class="card accent-c"><div class="small">Return 1A</div><div class="stat">₹3,595 pp</div><div class="kpi">18519 • Vizag 23:20 → Pune 00:35 on 24 Oct</div></div>
-    <div class="card accent-e"><div class="small">Recommended spend</div><div class="stat">₹55–57k</div><div class="kpi">For 3 adults, including contingency</div></div>
-  </div>
-  <div class="toc">
-    <a href="#trains">Train Plan</a><a href="#hotels">Hotels</a><a href="#buses">AC Bus Details</a>
-    <a href="#cars">Cars & Rentals</a><a href="#itinerary">Day-wise Itinerary</a><a href="#budget">Budget</a><a href="#contacts">Contacts</a>
-  </div>
-</section>
-
-<section class="section pagebreak" id="trains">
-  <h2>Rail Journey — 1A</h2>
-  <p class="lead">The recommended outbound is 18520 because it runs daily and offers 1A. The return is 18519, also daily with 1A. Current published fares are planning figures; confirm the final fare and berth availability on the booking date.</p>
-  <table>
-    <thead><tr><th>Direction</th><th>Train</th><th>Date</th><th>Departure</th><th>Arrival</th><th>Duration</th><th>1A planning fare / adult</th><th>3 adults</th></tr></thead>
-    <tbody>
-      <tr><td>Pune → Vizag</td><td><b>18520 LTT VSKP EXPRESS</b></td><td>17 Oct</td><td>Pune Jn 10:20</td><td>Visakhapatnam 10:50, 18 Oct</td><td>24h 30m</td><td class="money">₹3,845</td><td class="money">₹11,535</td></tr>
-      <tr><td>Vizag → Pune</td><td><b>18519 VSKP LTT EXPRESS</b></td><td>22 Oct</td><td>Visakhapatnam 23:20</td><td>Pune Jn 00:35, 24 Oct</td><td>25h 15m</td><td class="money">₹3,595*</td><td class="money">₹10,785*</td></tr>
-      <tr><td colspan="7"><b>Estimated rail total for 3 adults</b></td><td class="money">₹22,320*</td></tr>
-    </tbody>
-  </table>
-  <div class="note"><b>Important:</b> The ₹3,845 outbound 1A figure is shown in current Aug-2026 search results. The route table currently quotes ₹3,595 for 1A on the reverse route. Railway dynamic/surcharge differences can occur, so keep a ₹500–₹1,000 total rail buffer.</div>
-  <h3>Why 18520 is used instead of the faster Konark</h3>
-  <ul>
-    <li>Konark Express 11019 is faster at about 21h 40m but does not currently list 1A on the Pune–Vizag route.</li>
-    <li>18520 is daily and explicitly offers 1A, matching the requested class.</li>
-    <li>18520 has no pantry; therefore the four-times-daily food budget below deliberately includes train meals.</li>
-  </ul>
-  <p class="source"><strong>Rail timetable/fare sources:</strong> eRail route and train data; ixigo/ConfirmTkt current fare snapshots. <a href="https://erail.in/train-enquiry/18520" target="_blank">18520 timetable</a> · <a href="https://erail.in/train-enquiry/18519" target="_blank">18519 timetable</a> · <a href="https://www.ixigo.com/by-train-rail/pune-to-visakhapatnam-by-train" target="_blank">Pune–Vizag fare snapshot</a>.</p>
-</section>
-
-<section class="section" id="hotels">
-  <h2>Hotel Accommodation — Low-Cost Choices</h2>
-  <p class="lead">The plan keeps the group close to rail/transport hubs and uses a triple-capacity room where confirmed, otherwise two basic rooms. October is a busy period in Araku, so direct confirmation is essential.</p>
-  <div class="grid">
-    <div class="card accent-c">
-      <h3>Visakhapatnam — Hotel Lakshmi Grand</h3>
-      <p><b>Recommended for:</b> 18 Oct, 21 Oct and 22 Oct — 3 nights total.</p>
-      <p><b>Address:</b> 33-14-200, Allipuram Main Road, near Gandhi Statue, Nerella Koneru, Allipuram, Visakhapatnam, Andhra Pradesh 530004.</p>
-      <p class="contact"><b>Phone:</b> <a href="tel:+918912748090">0891 274 8090</a><br>
-      <b>Email:</b> <a href="mailto:lakshmigrandvsp@gmail.com">lakshmigrandvsp@gmail.com</a><br>
-      <b>Website:</b> <a href="https://www.hotellakshmigrand.com" target="_blank">hotellakshmigrand.com</a></p>
-      <p><b>Published budget indication:</b> Standard Non-AC about ₹775; Deluxe AC about ₹1,034 before any date-specific change. For 3 adults, budget two rooms unless the hotel confirms a suitable triple room.</p>
-    </div>
-    <div class="card accent-b">
-      <h3>Visakhapatnam — Hotel Akshaya</h3>
-      <p><b>Backup / preferred rail-hub alternative.</b> Particularly useful when train proximity matters.</p>
-      <p><b>Address:</b> Opposite DRM Office, Railway Station Road, Dondaparthi, Visakhapatnam, Andhra Pradesh 530016.</p>
-      <p class="contact"><b>Phone:</b> <a href="tel:+919177892359">+91 91778 92359</a> / <a href="tel:+918912533188">+91 89125 33188</a> / <a href="tel:+919177320359">+91 91773 20359</a><br>
-      <b>Email:</b> <a href="mailto:reserve@hotelakshaya.in">reserve@hotelakshaya.in</a><br>
-      <b>Website:</b> <a href="https://hotelakshaya.in" target="_blank">hotelakshaya.in</a></p>
-      <p><b>Published tariff:</b> Executive Double ₹1,480 + tax; Executive Double with breakfast ₹1,580 + tax; Non-AC Double ₹1,280 + tax. Confirm whether 3 adults can share one room.</p>
-    </div>
-    <div class="card accent-d">
-      <h3>Araku — Krishna Tara Comforts</h3>
-      <p><b>Recommended:</b> 19 Oct and 20 Oct — 2 nights. Current booking information states that the listed double rooms can accommodate 3 adults.</p>
-      <p><b>Address:</b> Araku RS Sub Post Office, 13-950, Bank Street, Araku Main Road, Araku, Alluri Sitharama Raju District, Andhra Pradesh 531151.</p>
-      <p class="contact"><b>Phone:</b> <a href="tel:+919390901929">+91 93909 01929</a>. Alternate booking contact published by Venus Tours: <a href="tel:+919299501309">+91 92995 01309</a> / <a href="tel:+918912727818">0891 272 7818</a>.<br>
-      <b>Email:</b> <a href="mailto:rkvenustours@gmail.com">rkvenustours@gmail.com</a> (Venus Tours booking contact).</p>
-      <p><b>Current booking examples:</b> Standard/Deluxe Non-AC and AC rooms are shown around ₹1,300–₹1,700 plus taxes after offers; the property lists a restaurant, Wi-Fi and parking. October rates must be reconfirmed.</p>
-    </div>
-    <div class="card accent-e">
-      <h3>Araku — Ushodaya Resorts</h3>
-      <p><b>Backup:</b> Padmapuram area; suitable if Krishna Tara is sold out.</p>
-      <p><b>Location:</b> Padmapuram, Araku Valley, Andhra Pradesh 531149.</p>
-      <p class="contact"><b>Reservation:</b> <a href="tel:+919441196111">+91 94411 96111</a> (Govind) / <a href="tel:+919491193311">+91 94911 93311</a> (Diwakar)<br>
-      <b>Reception:</b> <a href="tel:+919441193222">+91 94411 93222</a> (Durga) / <a href="tel:+919491193111">+91 94911 93111</a> (Gopal)<br>
-      <b>Email:</b> <a href="mailto:ushodayaresortsaraku@outlook.com">ushodayaresortsaraku@outlook.com</a></p>
-      <p><b>Published room range:</b> approximately ₹1,600–₹7,499 depending on room type. Ask specifically for the lowest non-AC/standard room for 3 adults.</p>
-    </div>
-  </div>
-  <p class="source"><strong>Hotel sources:</strong> Hotel Akshaya official contact/tariff pages; Hotel Lakshmi Grand contact listing; Krishna Tara current booking data; Ushodaya Resorts contact page. <a href="https://hotelakshaya.in/rooms.html" target="_blank">Akshaya tariff</a> · <a href="https://hotelakshaya.in/contacts-Hotel-Akshaya-visakhapatnam.html" target="_blank">Akshaya contact</a> · <a href="https://www.makemytrip.com/hotels/krishna_tara_comforts-details-araku_valley.html" target="_blank">Krishna Tara rooms</a> · <a href="https://ushodayaresortsaraku.com/" target="_blank">Ushodaya</a>.</p>
-</section>
-
-<section class="section pagebreak" id="buses">
-  <h2>Luxury AC Bus / AC Bus Details</h2>
-  <p class="lead">There is an important practical distinction on the Vizag–Araku corridor: current booking inventory is inconsistent. The direct APSRTC listing currently visible for Visakhapatnam → Araku is a non-AC Express at about ₹147, while booking portals expose AC/Volvo filters but do not consistently show a live direct luxury AC departure. For a firm very-low-budget plan, the public bus fare is the safe budget number; for guaranteed AC, pre-confirm the exact service before paying.</p>
-  <table>
-    <thead><tr><th>Route</th><th>Current published service picture</th><th>Indicative fare</th><th>Time</th><th>Budget for 3</th></tr></thead>
-    <tbody>
-      <tr><td>Visakhapatnam → Araku</td><td>APSRTC 27018, Express NON-AC Seater; RTC Complex / NAD Junction listings</td><td class="money">₹147 pp</td><td>~3h 35m</td><td class="money">₹441</td></tr>
-      <tr><td>Araku → Visakhapatnam</td><td>APSRTC listings include services around 08:30 and 16:00; current fare snapshot around ₹153 onwards. AC filters exist but live AC inventory is not consistently displayed.</td><td class="money">₹153+ pp</td><td>~3h 15m</td><td class="money">₹459+</td></tr>
-      <tr><td>Private / Luxury AC coach hire</td><td>SKS Travels offers Hi-Tech A/C and non-A/C buses for hire. Their published tariff is for full-vehicle charter, not 3-seat tickets.</td><td class="money">₹6,500+ / day</td><td>Depends on charter</td><td>Not economical for 3 adults</td></tr>
-    </tbody>
-  </table>
-  <div class="good"><b>Best value for this group:</b> Use the bus only for the Araku → Vizag transfer on 21 Oct if the live AC inventory is confirmed. Do not charter a 24/35-seater just for three adults. The small-group car is cheaper when Borra Caves and multiple viewpoints are involved.</div>
-  <h3>Luxury / AC bus charter reference — SKS Travels</h3>
-  <table>
-    <thead><tr><th>Vehicle</th><th>A/C per-km rate</th><th>Published Araku–Borra day charter</th><th>Published 2-day / 1-night charter</th></tr></thead>
-    <tbody>
-      <tr><td>24-seater</td><td>₹45/km</td><td>₹15,000</td><td>₹22,000</td></tr>
-      <tr><td>35–40-seater</td><td>₹65/km</td><td>₹20,000</td><td>₹30,000</td></tr>
-      <tr><td>45–50-seater</td><td>₹68/km</td><td>₹21,000</td><td>₹31,000</td></tr>
-    </tbody>
-  </table>
-  <p class="contact"><b>SKS Travels:</b> Sector 11, MVP Double Road, Opp. Aaha Yemi Ruchulu Restaurant, near Beach Road, Visakhapatnam 530017. Phone: <a href="tel:+919951485835">+91 99514 85835</a>, <a href="tel:+919705806475">+91 97058 06475</a>. Email: <a href="mailto:skstravels2004@yahoo.co.in">skstravels2004@yahoo.co.in</a>.</p>
-  <p class="source"><strong>Bus sources:</strong> APSRTC regional fare page; AbhiBus/Goibibo current route inventory; SKS Travels tariff/contact pages. <a href="https://www.apsrtc.ap.gov.in/T_Visakhapatnam.php" target="_blank">APSRTC fares</a> · <a href="https://www.abhibus.com/bus-tickets/apsrtc-visakhapatnam-araku-bus-booking" target="_blank">AbhiBus route</a> · <a href="https://www.goibibo.com/bus/araku-to-visakhapatnam-bus-tickets/" target="_blank">Araku → Vizag inventory</a> · <a href="https://skstravelsvizag.com/Tariff.aspx" target="_blank">SKS tariff</a>.</p>
-</section>
-
-<section class="section" id="cars">
-  <h2>Car Rental & Local Cab Services</h2>
-  <p class="lead">For three adults, a compact AC sedan/MUV is the economical sweet spot. The route needs a hill-trained driver, especially for the Borra–Araku road and its bends.</p>
-  <div class="grid">
-    <div class="card accent-a">
-      <h3>Vizag Wheels — AC Ertiga</h3>
-      <p><b>Recommended for 19 Oct:</b> Visakhapatnam → Borra Caves → Araku, 12 hours / 120 km.</p>
-      <p><b>Published fare:</b> <span class="money">₹4,515 including taxes</span> for Maruti Ertiga AC, 7 seats. Extra km ₹16; extra hour ₹200.</p>
-      <p class="contact"><b>Phone:</b> <a href="tel:+917729844777">+91 77298 44777</a><br>
-      <b>Website:</b> <a href="https://vizagwheels.in/vizag-to-borra-caves-car-rental/" target="_blank">vizagwheels.in</a></p>
-      <p class="small">This is the cleanest published price found for the exact Borra/Araku small-group use case.</p>
-    </div>
-    <div class="card accent-c">
-      <h3>ArakuTrip — Local Valley Cab</h3>
-      <p><b>Recommended for 20 Oct:</b> 2-day sightseeing circuit is published at ₹5,500 flat for a sedan; a 1-day Side A is ₹4,000 and Side B ₹3,000.</p>
-      <p><b>Also published:</b> Vizag ↔ Araku sedan round trip from ₹6,000; tolls on the Vizag route may be extra depending on the quote.</p>
-      <p class="contact"><b>Phone / WhatsApp:</b> <a href="tel:+919854975497">+91 98549 75497</a><br>
-      <b>Email:</b> <a href="mailto:booking@arakutrip.in">booking@arakutrip.in</a><br>
-      <b>Office:</b> Araku Valley, Andhra Pradesh 531151<br>
-      <b>Website:</b> <a href="https://arakutrip.in/" target="_blank">arakutrip.in</a></p>
-    </div>
-    <div class="card accent-b">
-      <h3>Vizag Cab Service / Frenz Travels</h3>
-      <p>Useful backup for airport/station transfers, city sightseeing and Araku trips.</p>
-      <p class="contact"><b>Office:</b> Police Complex, Shop No. 16 Street, Vishalakshi Nagar, Visakhapatnam 530043; another published office listing gives 42 Beach Road, Visakhapatnam.<br>
-      <b>Phone / WhatsApp:</b> <a href="tel:+919100577546">+91 91005 77546</a><br>
-      <b>Email:</b> <a href="mailto:vizagcabservcie@gmail.com">vizagcabservcie@gmail.com</a><br>
-      <b>Website:</b> <a href="https://www.vizagcabservice.in/contact.php" target="_blank">vizagcabservice.in</a></p>
-    </div>
-    <div class="card accent-d">
-      <h3>Araku Local Taxi — Station Pickup</h3>
-      <p>Published station-to-resort sedan pickup starts around ₹500; useful if the group chooses the scenic train into Araku instead of the road car.</p>
-      <p class="contact"><b>Phone / WhatsApp:</b> <a href="tel:+919854975497">+91 98549 75497</a><br><b>Email:</b> <a href="mailto:booking@arakutrip.in">booking@arakutrip.in</a></p>
-    </div>
-  </div>
-  <div class="note"><b>Cost-saving rule:</b> Do not rent a car for every day. Use the car on the Borra/Araku transfer day and a local flat-rate Araku cab on the sightseeing day. For Vizag city, walk/auto/ride-hailing for short hops and one 8-hour sedan package only if the group wants a full city circuit.</div>
-  <p class="source"><strong>Car sources:</strong> Vizag Wheels exact Borra/Araku tariff; ArakuTrip local and intercity tariffs; Vizag Cab Service contact; SKS charter reference. <a href="https://vizagwheels.in/vizag-to-borra-caves-car-rental/" target="_blank">Vizag Wheels</a> · <a href="https://arakutrip.in/araku-local-taxi-booking/" target="_blank">ArakuTrip local taxi</a> · <a href="https://www.vizagcabservice.in/contact.php" target="_blank">Vizag Cab Service</a>.</p>
-</section>
-
-<section class="section pagebreak" id="itinerary">
-  <h2>Day-by-Day Detailed Itinerary</h2>
-  <div class="timeline">
-    <article class="day">
-      <div class="datebox"><span>Saturday</span><b>17</b><span>October</span></div>
-      <div><h3>Day 1 — Pune → Visakhapatnam: Board 1A</h3>
-        <span class="pill">Train</span><span class="pill">4 food stops</span><span class="pill">Overnight 1A</span>
-        <ul>
-          <li>07:45–08:30 — Reach Pune Junction; verify coach/berth and keep ID handy.</li>
-          <li>09:00 — Light breakfast at/near station.</li>
-          <li><b>10:20 — Board 18520 LTT VSKP EXPRESS from Pune Jn.</b></li>
-          <li>13:30 — Lunch on train; keep a packed/low-cost meal to avoid premium onboard purchases.</li>
-          <li>17:30 — Tea/snack stop using station vendors where the halt allows safe purchase.</li>
-          <li>20:30 — Dinner; settle into 1A berth.</li>
-          <li>Night — Overnight train journey.</li>
-        </ul>
-        <p><b>Hotel:</b> None — overnight in 1A. <b>Transport:</b> Pune station local transfer extra, budget ₹300 total.</p>
-      </div>
-    </article>
-
-    <article class="day">
-      <div class="datebox"><span>Sunday</span><b>18</b><span>October</span></div>
-      <div><h3>Day 2 — Arrive Vizag + City Highlights</h3>
-        <span class="pill">10:50 arrival</span><span class="pill">Hotel</span><span class="pill">City</span>
-        <ul>
-          <li><b>10:50 — Arrive Visakhapatnam.</b> Collect luggage and transfer to Hotel Lakshmi Grand or Hotel Akshaya.</li>
-          <li>12:00 — Check-in / freshen up.</li>
-          <li>13:00 — Lunch near hotel.</li>
-          <li>14:30 — RK Beach and Submarine Museum area.</li>
-          <li>17:00 — Kailasagiri viewpoint; sunset if weather permits.</li>
-          <li>19:30 — Return to hotel; evening snack.</li>
-          <li>20:30 — Dinner and rest.</li>
-        </ul>
-        <p><b>Suggested transport:</b> 8-hour AC sedan package if booked; otherwise autos/ride-hailing. <b>Hotel night:</b> Vizag.</p>
-      </div>
-    </article>
-
-    <article class="day">
-      <div class="datebox"><span>Monday</span><b>19</b><span>October</span></div>
-      <div><h3>Day 3 — Vizag → Borra Caves → Araku</h3>
-        <span class="pill">AC Ertiga</span><span class="pill">Borra Caves</span><span class="pill">Araku</span>
-        <ul>
-          <li>06:30 — Breakfast and checkout.</li>
-          <li>07:00 — Pickup by AC Ertiga; start via the Eastern Ghats.</li>
-          <li>09:30–10:30 — Borra Caves. Allow ticket queues and walking time.</li>
-          <li>10:45 — Short refreshment/coffee stop.</li>
-          <li>12:00 — Continue toward Araku; scenic viewpoints and coffee plantations as time permits.</li>
-          <li>14:00 — Lunch in Araku.</li>
-          <li>15:00 — Hotel check-in at Krishna Tara Comforts.</li>
-          <li>16:00–18:00 — Padmapuram Gardens / town-side walk depending on energy.</li>
-          <li>19:30 — Dinner and overnight in Araku.</li>
-        </ul>
-        <p><b>Car budget:</b> ₹4,515 published for Ertiga 12h/120km; tolls/entry/extra time must be confirmed. <b>Hotel:</b> Araku.</p>
-      </div>
-    </article>
-
-    <article class="day">
-      <div class="datebox"><span>Tuesday</span><b>20</b><span>October</span></div>
-      <div><h3>Day 4 — Full Araku Valley Sightseeing</h3>
-        <span class="pill">Local cab</span><span class="pill">Coffee</span><span class="pill">Waterfalls</span>
-        <ul>
-          <li>07:00 — Breakfast.</li>
-          <li>08:00 — Start local sightseeing with ArakuTrip sedan or equivalent.</li>
-          <li>08:30–10:00 — Coffee plantation / coffee experience and Galikonda viewpoint.</li>
-          <li>10:30–11:30 — Optional Katiki Waterfalls access; local 4WD/trek is extra.</li>
-          <li>12:30 — Lunch in Araku town.</li>
-          <li>13:30 — Tribal Museum and Coffee Museum.</li>
-          <li>15:30 — Chocolate Factory / local shopping.</li>
-          <li>16:30–17:30 — Chaparai Waterfalls if conditions permit.</li>
-          <li>18:00 — Return to hotel; evening tea/snack.</li>
-          <li>20:00 — Dinner and second Araku night.</li>
-        </ul>
-        <p><b>Local cab:</b> budget ₹5,500 for the published 2-day flat circuit or ₹3,000–₹4,000 for a single-day side. <b>Hotel:</b> Araku.</p>
-      </div>
-    </article>
-
-    <article class="day">
-      <div class="datebox"><span>Wednesday</span><b>21</b><span>October</span></div>
-      <div><h3>Day 5 — Araku → Vizag + Relaxed Evening</h3>
-        <span class="pill">Bus</span><span class="pill">Hotel</span><span class="pill">Free evening</span>
-        <ul>
-          <li>07:00 — Breakfast and checkout.</li>
-          <li>08:00 — Board the confirmed Araku → Visakhapatnam bus if a suitable AC service is live; otherwise use the published APSRTC service.</li>
-          <li>11:15–12:00 — Expected Vizag arrival depending on actual service.</li>
-          <li>12:30 — Check into Vizag hotel.</li>
-          <li>13:30 — Lunch and rest.</li>
-          <li>16:30 — Rushikonda Beach or nearby relaxed sightseeing.</li>
-          <li>19:00 — Snack/tea.</li>
-          <li>20:30 — Dinner; early rest.</li>
-        </ul>
-        <p><b>Bus budget:</b> approximately ₹153+ per adult on current return inventory; AC must be rechecked for the actual date. <b>Hotel:</b> Vizag.</p>
-      </div>
-    </article>
-
-    <article class="day">
-      <div class="datebox"><span>Thursday</span><b>22</b><span>October</span></div>
-      <div><h3>Day 6 — Vizag Buffer Day + Board Return 1A</h3>
-        <span class="pill">Buffer</span><span class="pill">Shopping</span><span class="pill">23:20 train</span>
-        <ul>
-          <li>07:30 — Breakfast.</li>
-          <li>09:00–12:00 — Simhachalam Temple / local market or another missed city attraction.</li>
-          <li>13:00 — Lunch.</li>
-          <li>14:00–17:00 — Rest, beach, shopping and luggage organization.</li>
-          <li>18:00 — Early dinner near the railway station.</li>
-          <li>20:30 — Collect luggage and transfer to Visakhapatnam station.</li>
-          <li><b>22:35 — Reach station.</b></li>
-          <li><b>23:20 — Board 18519 VSKP LTT EXPRESS in 1A.</b></li>
-          <li>Night — Overnight train.</li>
-        </ul>
-        <p><b>Hotel:</b> Vizag checkout on 22 Oct. <b>Train:</b> overnight in 1A.</p>
-      </div>
-    </article>
-
-    <article class="day">
-      <div class="datebox"><span>Friday</span><b>23</b><span>October</span></div>
-      <div><h3>Day 7 — Full Day on Return Train</h3>
-        <span class="pill">1A</span><span class="pill">4 food stops</span><span class="pill">Relax</span>
-        <ul>
-          <li>07:30 — Breakfast on/near a suitable station halt.</li>
-          <li>10:30 — Reading/rest; keep valuables secure.</li>
-          <li>13:00 — Lunch.</li>
-          <li>17:00 — Tea/snack.</li>
-          <li>20:30 — Dinner.</li>
-          <li>Night — Continue in 1A.</li>
-        </ul>
-        <p><b>Hotel:</b> None. <b>Food:</b> covered by the daily ₹300/person planning allowance.</p>
-      </div>
-    </article>
-
-    <article class="day">
-      <div class="datebox"><span>Saturday</span><b>24</b><span>October</span></div>
-      <div><h3>Day 8 — Arrive Pune + Buffer / Rest</h3>
-        <span class="pill">00:35 arrival</span><span class="pill">Trip buffer</span>
-        <ul>
-          <li><b>00:35 — Scheduled arrival at Pune Junction.</b></li>
-          <li>01:00 — Local transfer home / pre-arranged pickup.</li>
-          <li>Morning — Rest.</li>
-          <li>Daytime — No planned paid sightseeing; this is intentionally a buffer day after the long return journey.</li>
-          <li>Food: breakfast, lunch, evening snack and dinner as normal, but this can be reduced if the group rests at home.</li>
-        </ul>
-        <p><b>Hotel:</b> None. <b>Local transfer:</b> budget ₹300 total.</p>
-      </div>
-    </article>
-
-    <article class="day">
-      <div class="datebox"><span>Sunday</span><b>25</b><span>October</span></div>
-      <div><h3>Day 9 — Trip Close / Contingency Day</h3>
-        <span class="pill">No booking required</span><span class="pill">Contingency</span>
-        <ul>
-          <li>This day is deliberately left free so the trip does not fail because of a train delay, road disruption, weather, or a missed connection.</li>
-          <li>If everything runs on schedule, the journey is already complete by 24 Oct.</li>
-          <li>Use the remaining budget only for personal purchases, additional meals, or an unexpected transport need.</li>
-        </ul>
-      </div>
-    </article>
-  </div>
-</section>
-
-<section class="section" id="food">
-  <h2>Four-Times-Daily Fooding Plan</h2>
-  <p class="lead">The food budget is deliberately conservative for a low-cost trip. It avoids hotel buffets and expensive tourist restaurants and keeps the same simple allowance on train days.</p>
-  <table>
-    <thead><tr><th>Meal</th><th>Target / adult</th><th>For 3 adults</th><th>Suggested pattern</th></tr></thead>
-    <tbody>
-      <tr><td>Breakfast</td><td class="money">₹60</td><td class="money">₹180</td><td>Idli/vada, poha, upma, dosa, tea</td></tr>
-      <tr><td>Lunch</td><td class="money">₹100</td><td class="money">₹300</td><td>Rice meal / thali / veg curry + rice</td></tr>
-      <tr><td>Evening snack</td><td class="money">₹40</td><td class="money">₹120</td><td>Tea/coffee + snack / fruit</td></tr>
-      <tr><td>Dinner</td><td class="money">₹100</td><td class="money">₹300</td><td>Rice/roti + dal/veg/chicken depending preference</td></tr>
-      <tr><td><b>Daily target</b></td><td class="money"><b>₹300</b></td><td class="money"><b>₹900</b></td><td>Keep ₹100/day group contingency for water/extra tea</td></tr>
-    </tbody>
-  </table>
-  <div class="note"><b>Fooding total used in budget:</b> ₹900/day × 8 active spend days = ₹7,200 for 3 adults. If hotel breakfast is included, use the saving for the train journey or entry tickets rather than increasing restaurant spend.</div>
-</section>
-
-<section class="section pagebreak" id="budget">
-  <h2>Complete Estimated Budget — 3 Adults</h2>
-  <p class="lead">This is the practical “very low” target, not a luxury quote. It includes the requested 1A train class, accommodation, food, local car, bus and a contingency allowance.</p>
-  <div class="card accent-d">
-    <div class="small">Core estimated spend</div>
-    <div class="budget-total">₹53,943</div>
-    <div class="small">Recommended booking envelope after rounding and price fluctuation: <b>₹55,000–₹57,000 for 3 adults</b>.</div>
-  </div>
-  <div class="budget-row"><b>1A rail</b><div class="bar"><span style="width:41%"></span></div><span class="money">₹22,320</span></div>
-  <div class="budget-row"><b>Hotels</b><div class="bar"><span style="width:19%"></span></div><span class="money">₹10,000</span></div>
-  <div class="budget-row"><b>Cars / local cab</b><div class="bar"><span style="width:24%"></span></div><span class="money">₹12,744</span></div>
-  <div class="budget-row"><b>Bus</b><div class="bar"><span style="width:2%"></span></div><span class="money">₹459</span></div>
-  <div class="budget-row"><b>Food</b><div class="bar"><span style="width:13%"></span></div><span class="money">₹7,200</span></div>
-  <div class="budget-row"><b>Local / entries / misc.</b><div class="bar"><span style="width:6%"></span></div><span class="money">₹3,220</span></div>
-
-  <table>
-    <thead><tr><th>Expense head</th><th>Calculation</th><th>3-adult estimate</th><th>Per adult</th></tr></thead>
-    <tbody>
-      <tr><td>Outbound 1A</td><td>₹3,845 × 3</td><td class="money">₹11,535</td><td>₹3,845</td></tr>
-      <tr><td>Return 1A</td><td>₹3,595 × 3</td><td class="money">₹10,785</td><td>₹3,595</td></tr>
-      <tr><td>Vizag hotels</td><td>3 nights; low-cost room allocation</td><td class="money">₹6,600</td><td>₹2,200</td></tr>
-      <tr><td>Araku hotel</td><td>2 nights; one 3-adult room if confirmed</td><td class="money">₹3,400</td><td>₹1,133</td></tr>
-      <tr><td>Vizag local car</td><td>8-hour AC sedan package / equivalent</td><td class="money">₹2,729</td><td>₹910</td></tr>
-      <tr><td>Vizag → Borra → Araku car</td><td>AC Ertiga 12h/120km</td><td class="money">₹4,515</td><td>₹1,505</td></tr>
-      <tr><td>Araku local sightseeing</td><td>2-day flat sedan circuit budget</td><td class="money">₹5,500</td><td>₹1,833</td></tr>
-      <tr><td>Araku → Vizag bus</td><td>₹153 × 3, indicative</td><td class="money">₹459</td><td>₹153</td></tr>
-      <tr><td>Fooding</td><td>₹300 × 3 × 8 days</td><td class="money">₹7,200</td><td>₹2,400</td></tr>
-      <tr><td>Local transfers / entry / misc.</td><td>Station transfers, cave/museum tickets, water, small autos</td><td class="money">₹3,220</td><td>₹1,073</td></tr>
-      <tr><td><b>Total planning estimate</b></td><td></td><td class="money"><b>₹53,943</b></td><td class="money"><b>₹17,981</b></td></tr>
-    </tbody>
-  </table>
-  <div class="warn"><b>Keep a ₹3,000 contingency reserve.</b> October falls inside the peak-season window quoted by local Araku cab providers; hotel and cab rates can rise. A safer cash/UPI envelope is therefore ₹57,000 total, or about ₹19,000 per adult.</div>
-</section>
-
-<section class="section" id="contacts">
-  <h2>Complete Contact Directory</h2>
-  <table>
-    <thead><tr><th>Service</th><th>Phone</th><th>Email</th><th>Address / Notes</th></tr></thead>
-    <tbody>
-      <tr><td><b>Hotel Lakshmi Grand</b></td><td>0891 274 8090</td><td>lakshmigrandvsp@gmail.com</td><td>33-14-200 Allipuram Main Rd, near Gandhi Statue, Visakhapatnam 530004</td></tr>
-      <tr><td><b>Hotel Akshaya</b></td><td>+91 91778 92359; +91 89125 33188; +91 91773 20359</td><td>reserve@hotelakshaya.in</td><td>Opp. DRM Office, Railway Station Road, Dondaparthi, Visakhapatnam 530016</td></tr>
-      <tr><td><b>Krishna Tara Comforts</b></td><td>+91 93909 01929; +91 92995 01309; 0891 272 7818</td><td>rkvenustours@gmail.com</td><td>Araku RS Sub Post Office / Bank Street, Araku Main Road, Araku 531151</td></tr>
-      <tr><td><b>Ushodaya Resorts</b></td><td>+91 94411 96111; +91 94911 93311; +91 94411 93222; +91 94911 93111</td><td>ushodayaresortsaraku@outlook.com</td><td>Padmapuram, Araku Valley 531149</td></tr>
-      <tr><td><b>Vizag Wheels</b></td><td>+91 77298 44777</td><td>Use website enquiry</td><td>AC Ertiga Borra/Araku published tariff ₹4,515 inc. taxes</td></tr>
-      <tr><td><b>ArakuTrip</b></td><td>+91 98549 75497</td><td>booking@arakutrip.in</td><td>Araku Valley 531151; WhatsApp booking; local and intercity cabs</td></tr>
-      <tr><td><b>Vizag Cab Service / Frenz Travels</b></td><td>+91 91005 77546</td><td>vizagcabservcie@gmail.com</td><td>Police Complex Shop 16, Vishalakshi Nagar, Visakhapatnam 530043</td></tr>
-      <tr><td><b>SKS Travels</b></td><td>+91 99514 85835; +91 97058 06475</td><td>skstravels2004@yahoo.co.in</td><td>Sector 11, MVP Double Road, near Beach Road, Visakhapatnam 530017</td></tr>
-    </tbody>
-  </table>
 </section>
 
 <section class="section">
-  <h2>Booking Sequence — Do This in Order</h2>
-  <ol>
-    <li><b>Book 1A trains first:</b> 18520 on 17 Oct and 18519 on 22 Oct. Keep the final fare screenshot/PNR.</li>
-    <li><b>Lock Araku accommodation:</b> ask Krishna Tara for one room for 3 adults for 19–21 Oct and get the total after tax in writing.</li>
-    <li><b>Lock Vizag accommodation:</b> request the lowest available AC/basic rooms for 18–19 Oct and 21–22 Oct; verify whether one room can legally house all three adults.</li>
-    <li><b>Book the 19 Oct car:</b> ask for an AC Ertiga or similar, Vizag pickup → Borra Caves → Araku, with driver allowance, tolls, parking, extra-hour rate and luggage capacity written down.</li>
-    <li><b>Book the Araku local cab:</b> use a flat 2-day circuit if you want the complete valley, or ₹4,000 Side A + ₹3,000 Side B if booked separately.</li>
-    <li><b>Recheck the AC bus:</b> 7–10 days before 21 Oct. If a direct AC service is not genuinely available, use the published APSRTC bus or ask the Araku cab operator for a station/bus-stand transfer.</li>
-    <li><b>Keep ₹3,000 contingency:</b> October is a peak period and hill-weather delays can alter the road schedule.</li>
-  </ol>
-  <div class="good"><b>Best overall low-cost configuration:</b> 1A train both ways + Hotel Lakshmi Grand/Akshaya in Vizag + Krishna Tara in Araku + AC Ertiga for Borra/Araku + Araku local flat-rate cab + public bus only for the Araku→Vizag transfer if the live service is suitable.</div>
+  <div class="grid">
+    <div class="metric"><small>Travel window</small><strong>22–26 Oct</strong><span>2026</span></div>
+    <div class="metric"><small>Route</small><strong>≈ 1,800 km+</strong><span>rail + road combined</span></div>
+    <div class="metric"><small>Planning target</small><strong>₹30k–₹36k</strong><span>for all 3 adults, before optional extras</span></div>
+  </div>
 </section>
 
-<footer class="footer">
-  <h2 style="margin-top:0;color:#fff">Rate & Availability Check — 22 August 2026</h2>
-  <p>This plan uses published fares, hotel tariffs and operator contact information available during preparation. Train availability, hotel availability, bus inventory, October peak-season pricing, taxes, attraction fees and local transport quotes can change before 17 October 2026.</p>
-  <p>Before making payment, confirm the exact date, passenger count (3 adults), room occupancy, cancellation terms, vehicle type, inclusions/exclusions and final payable amount directly with the provider.</p>
-  <p style="margin-bottom:0"><b>Key public references:</b>
-    <a href="https://www.apsrtc.ap.gov.in/T_Visakhapatnam.php" target="_blank">APSRTC</a> ·
-    <a href="https://erail.in/trains-between-stations/pune-jn-PUNE/visakhapatnam-VSKP" target="_blank">Pune–Vizag trains</a> ·
-    <a href="https://erail.in/trains-between-stations/visakhapatnam-VSKP/pune-jn-PUNE" target="_blank">Vizag–Pune trains</a> ·
-    <a href="https://vizagwheels.in/vizag-to-borra-caves-car-rental/" target="_blank">Vizag Wheels</a> ·
-    <a href="https://arakutrip.in/araku-local-taxi-booking/" target="_blank">ArakuTrip</a> ·
-    <a href="https://skstravelsvizag.com/Tariff.aspx" target="_blank">SKS Travels</a>
-  </p>
-</footer>
+<section class="section card">
+<h2 class="section-title">Important booking position</h2>
+<div class="note">
+The figures below are a practical <strong>budget-planning estimate</strong>, not a guaranteed quotation for 22–26 October 2026. Rail fares change by train/date/quota, hotel prices change by occupancy, and private cab operators may revise October peak-season rates. Book the trains first, then lock the hotel and cab in writing.
+</div>
+<p>Current route references show Kolkata–Visakhapatnam 2A fares around <strong>₹1,765–₹1,810 per adult one way</strong> on representative services, while current route pages place the minimum 2A fare around ₹1,775. Exact 22 October and 26 October inventory must be checked at booking time. citeturn2search8turn2search10turn2search3</p>
+</section>
+
+<section class="section">
+<h2 class="section-title">Recommended transport structure</h2>
+<table>
+<thead><tr><th>Sector</th><th>Recommended</th><th>Working fare / person</th><th>3-adult total</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Kolkata → Visakhapatnam<br>22 Oct</td><td>2A overnight train</td><td class="amount">₹1,800</td><td class="amount">₹5,400</td><td>Lowest sensible comfort level; saves a hotel night.</td></tr>
+<tr><td>Visakhapatnam → Araku<br>24 Oct</td><td>APSRTC/public bus or train</td><td class="amount">₹150–₹250</td><td class="amount">₹450–₹750</td><td>Very low-cost; current published APSRTC tourist fare is ₹46 on the official regional tourist-services page, while current booking listings show about ₹134–₹147. Use the actual service available on the date. citeturn0search0turn1search2turn1search7</td></tr>
+<tr><td>Araku local sightseeing<br>24–25 Oct</td><td>Small AC car with driver</td><td class="amount">₹2,300–₹2,700 pp</td><td class="amount">₹7,000–₹8,000</td><td>Best balance for 3 adults; allows Borra Caves and valley stops without multiple transfers.</td></tr>
+<tr><td>Araku → Visakhapatnam<br>25 Oct</td><td>Public bus</td><td class="amount">₹153–₹250</td><td class="amount">₹459–₹750</td><td>Current listings show APSRTC Ultra Deluxe around ₹153; AC luxury services are not consistently available on this route. citeturn1search9turn1search3</td></tr>
+<tr><td>Visakhapatnam → Kolkata<br>25 Oct night</td><td>2A overnight train</td><td class="amount">₹1,800</td><td class="amount">₹5,400</td><td>Reaches Kolkata on 26 Oct, keeping the trip inside the stated window.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section class="section">
+<h2 class="section-title">Luxury AC bus reality check</h2>
+<div class="warn">
+<strong>There is no dependable current luxury AC direct service that should be promised for Visakhapatnam ↔ Araku.</strong> Current booking results show APSRTC ordinary/Ultra Deluxe services as the consistently listed option, while AC sleeper and Volvo AC categories can show zero live services. Do not pre-budget a premium AC bus as if it were guaranteed. citeturn1search10turn1search13
+</div>
+<table>
+<thead><tr><th>Bus option</th><th>Current published information</th><th>Budget for 3</th><th>Recommendation</th></tr></thead>
+<tbody>
+<tr><td>APSRTC Express / Pallevelugu</td><td>Current listings: roughly ₹134–₹147 one way; about 3h 35m. citeturn1search2turn1search11</td><td>₹402–₹441</td><td>Best low-cost choice.</td></tr>
+<tr><td>APSRTC Ultra Deluxe, Araku → Vizag</td><td>Current listing: ₹153; examples include 07:15, 08:30, 10:00 and 16:00 departures, around 3h 15m–3h 30m. citeturn1search9</td><td>₹459</td><td>Use if timing matches.</td></tr>
+<tr><td>AC Sleeper / Volvo AC</td><td>Current route searches can show zero live AC-sleeper or Volvo AC services. citeturn1search10turn1search13</td><td>Not safely quotable</td><td>Do not build the itinerary around it.</td></tr>
+<tr><td>Private AC coach charter</td><td>Published Vizag bus-hire tariff from SKS Travels: AC 24-seat ₹40/km, 35–39 seat ₹55/km, 50–55 seat ₹60/km; minimum 300 km/day. citeturn1search1</td><td>Far above budget</td><td>Not suitable for 3 adults.</td></tr>
+</tbody>
+</table>
+</section>
+
+<div class="print-break"></div>
+
+<section class="section">
+<h2 class="section-title">Day-wise master itinerary</h2>
+
+<div class="day">
+<div class="dayhead"><div class="daynum">22</div><div><h3>Thursday · Kolkata → Visakhapatnam</h3><div class="small">Overnight 2A train • No hotel required</div></div></div>
+<div class="timeline">
+<div class="slot"><div class="time">Morning–Afternoon</div><strong>Prepare and reach Howrah / the selected Kolkata-origin station.</strong><ul><li>Carry ID used for the railway reservation.</li><li>Keep one small overnight bag outside the main luggage.</li><li>Pack water, dry snacks and a light shawl/jacket for the AC coach.</li></ul></div>
+<div class="slot"><div class="time">Around 15:00–16:30 target</div><strong>Preferred rail pattern:</strong> a Kolkata/Howrah-origin train running to Visakhapatnam overnight. Current timetable listings show Coromandel Express 12841 at about 15:10–04:20 and HWH–Cape 12665 at about 16:00–05:30 on representative schedules. Exact service/date should be reconfirmed when October inventory opens. citeturn2search10</div>
+<div class="slot"><div class="time">Evening / Night</div><strong>2A dinner and overnight on train.</strong><br>Meal allowance: use a budget packed meal rather than railway add-ons if keeping costs low.</div>
+</div></div>
+
+<div class="day">
+<div class="dayhead"><div class="daynum">23</div><div><h3>Friday · Visakhapatnam city + rest</h3><div class="small">Hotel night 1 • Easy day after overnight rail</div></div></div>
+<div class="timeline">
+<div class="slot"><div class="time">Early morning</div><strong>Arrive Visakhapatnam.</strong> Check in only if early check-in is accepted; otherwise leave luggage at reception and freshen up when the room becomes available.</div>
+<div class="slot"><div class="time">09:00–13:00</div><strong>Low-cost city orientation:</strong> RK Beach → Submarine area → Kailasagiri viewpoint. Use local city transport where possible rather than a full-day private car.</div>
+<div class="slot"><div class="time">13:00–14:00</div><strong>Lunch.</strong> Budget target ₹70–₹100 per person.</div>
+<div class="slot"><div class="time">14:00–17:30</div><strong>Hotel rest / optional beach walk.</strong> Keep the afternoon light so the group is fresh for the hill journey.</div>
+<div class="slot"><div class="time">20:00</div><strong>Dinner and early sleep.</strong> Hotel night at Visakhapatnam.</div>
+</div></div>
+
+<div class="day">
+<div class="dayhead"><div class="daynum">24</div><div><h3>Saturday · Visakhapatnam → Araku</h3><div class="small">Hotel night 2 • Araku Valley</div></div></div>
+<div class="timeline">
+<div class="slot"><div class="time">05:00–05:30</div><strong>Breakfast / tea and depart for Araku.</strong> Cheapest plan: public bus. Current route listings show about 3h 35m travel time and fares around ₹134–₹147 for the lowest listed service. citeturn1search2turn1search11</div>
+<div class="slot"><div class="time">09:00</div><strong>Arrive Araku.</strong> Check in / leave luggage at the hotel.</div>
+<div class="slot"><div class="time">10:00–13:00</div><strong>Araku Side B sightseeing:</strong> Tribal Museum → Coffee Museum → Padmapuram Gardens → local market.</div>
+<div class="slot"><div class="time">13:15</div><strong>Lunch.</strong> Local thali / Andhra meal, budget ₹80–₹120 per person.</div>
+<div class="slot"><div class="time">14:00–17:30</div><strong>Chaparai / nearby valley viewpoints</strong> depending on road and local cab timing.</div>
+<div class="slot"><div class="time">19:30</div><strong>Dinner.</strong> Keep the evening relaxed and prepare for Borra Caves next day.</div>
+</div></div>
+
+<div class="day">
+<div class="dayhead"><div class="daynum">25</div><div><h3>Sunday · Araku → Borra Caves → Visakhapatnam → Kolkata</h3><div class="small">Main sightseeing day • Overnight 2A train</div></div></div>
+<div class="timeline">
+<div class="slot"><div class="time">06:30</div><strong>Breakfast and check-out.</strong> Keep luggage in the cab if using a full-day car, or arrange hotel luggage storage.</div>
+<div class="slot"><div class="time">07:00–08:00</div><strong>Start by reserved local AC car.</strong> Preferred vehicle: sedan for the lowest price; Innova only if luggage/comfort requires it.</div>
+<div class="slot"><div class="time">08:00–10:30</div><strong>Borra Caves.</strong> The caves are about 90 km from Visakhapatnam and can be combined with the Araku road itinerary. The official cave information also notes Borra Guhalu railway station as a nearby access point. citeturn0search7</div>
+<div class="slot"><div class="time">10:30–12:30</div><strong>Ghat-road viewpoints / coffee plantation stops</strong> on the way toward Visakhapatnam.</div>
+<div class="slot"><div class="time">12:30–13:15</div><strong>Lunch.</strong> Budget ₹80–₹120 per person.</div>
+<div class="slot"><div class="time">14:30–16:00</div><strong>Reach Visakhapatnam.</strong> Collect any stored luggage, refresh and proceed to station.</div>
+<div class="slot"><div class="time">Evening / Night</div><strong>Board the pre-booked Visakhapatnam → Howrah/Kolkata 2A train.</strong> Current route listings show several daily services and 2A fare levels around ₹1,750–₹1,810 depending on service. citeturn2search0turn2search13</div>
+</div></div>
+
+<div class="day">
+<div class="dayhead"><div class="daynum">26</div><div><h3>Monday · Kolkata arrival</h3><div class="small">Trip ends</div></div></div>
+<div class="timeline">
+<div class="slot"><div class="time">Morning–Afternoon</div><strong>Arrive Howrah / Kolkata.</strong> Collect luggage and proceed home.</div>
+<div class="slot"><div class="time">Trip close</div><strong>Keep ₹500–₹1,000 per person as an emergency buffer</strong> for local auto/taxi, snacks, station meals, parking or fare changes.</div>
+</div></div>
+</section>
+
+<div class="print-break"></div>
+
+<section class="section">
+<h2 class="section-title">Hotel shortlist — budget-first</h2>
+<div class="grid2">
+<div class="contact">
+<h3>Visakhapatnam — Shree Lakshmi Guest House & Function Halls</h3>
+<p><strong>Address:</strong> 58-1-348, Butchiraju Palem, Baji Junction, NAD Kotha Road, Bank of Baroda Upstairs, Visakhapatnam – 530027.</p>
+<p class="phone">0891-2749384 · +91 9885001164 · +91 7893749384</p>
+<p><strong>Email:</strong> contact.shreelakshmi@gmail.com</p>
+<p><strong>Location advantage:</strong> about 2.5 km from Visakhapatnam airport and about 7 km from the railway station according to the property’s own contact page.</p>
+<p><a href="https://www.shreelakshmistay.com/Contactus.html" target="_blank">Hotel contact page</a></p>
+</div>
+<div class="contact">
+<h3>Araku — Ushodaya Resorts</h3>
+<p><strong>Address:</strong> Near Padmapuram Gardens, Araku Valley, Visakhapatnam District, Andhra Pradesh.</p>
+<p class="phone">Reservation: Govind +91 9441196111 · Diwakar +91 9491193311</p>
+<p><strong>Reception:</strong> Durga +91 9441193222 · Gopal +91 9491193111</p>
+<p><strong>Email:</strong> ushodayaresortsaraku@gmail.com · ushodayaresortsaraku@outlook.com</p>
+<p><strong>Published room range:</strong> about ₹1,600–₹7,499 depending on room type; confirm October 2026 rate directly.</p>
+<p><a href="https://www.ushodayaresortsaraku.com/contact.html" target="_blank">Resort contact page</a></p>
+</div>
+</div>
+
+<div class="grid2" style="margin-top:16px">
+<div class="contact">
+<h3>Araku alternative — Krishna Tara Comforts</h3>
+<p><strong>Address:</strong> Araku Valley, Garden Road, Padmapuram, Vizag, Andhra Pradesh 531149.</p>
+<p class="phone">+91 93909 01929</p>
+<p><strong>Check-in:</strong> 2:00 PM · <strong>Check-out:</strong> 12:00 PM.</p>
+<p>Current property listings show air conditioning, free Wi-Fi, parking and an on-site restaurant. citeturn4search7</p>
+</div>
+<div class="contact">
+<h3>Visakhapatnam alternative — Vizag's Destiny Inn</h3>
+<p><strong>Address:</strong> 58-18-20/1&2, NAD Junction, Narasimha Nagar, Gopalapatnam, NSTL, Visakhapatnam, Andhra Pradesh 530027.</p>
+<p class="phone">+91 6303780397</p>
+<p>Useful as a second quotation because it is in the NAD/Gopalapatnam side of the city.</p>
+</div>
+</div>
+</section>
+
+<section class="section card">
+<h2 class="section-title">Hotel budget for 3 adults</h2>
+<table>
+<thead><tr><th>Night</th><th>Preferred property</th><th>Target room arrangement</th><th>Budget target</th></tr></thead>
+<tbody>
+<tr><td>23 Oct</td><td>Shree Lakshmi Guest House</td><td>1 triple / family room, or 2 basic rooms if cheaper</td><td class="amount">₹1,500–₹2,200</td></tr>
+<tr><td>24 Oct</td><td>Ushodaya Resorts / Krishna Tara Comforts</td><td>1 triple / family room</td><td class="amount">₹1,600–₹2,500</td></tr>
+<tr><td colspan="3"><strong>2-night target</strong></td><td class="amount">₹3,100–₹4,700</td></tr>
+</tbody>
+</table>
+<p class="small">The property-published Ushodaya range starts around ₹1,600; exact October pricing should be confirmed by phone/email. citeturn4search2</p>
+</section>
+
+<section class="section">
+<h2 class="section-title">Car rental services — full contact sheet</h2>
+<div class="grid2">
+<div class="contact">
+<h3>Appanna Car Travels — Araku</h3>
+<p><strong>Address:</strong> Shop No. 21, ITDA Shopping Complex, Araku Valley, Kantabamsuguda, Andhra Pradesh 531149.</p>
+<p class="phone">+91 9849339967</p>
+<p><strong>Service:</strong> Travel agency / local vehicle arrangements.</p>
+</div>
+<div class="contact">
+<h3>Kiran Roy Car Travels — Araku</h3>
+<p><strong>Address:</strong> Araku Valley / Borra Caves area, Andhra Pradesh 531149.</p>
+<p class="phone">+91 8500403417</p>
+<p><strong>Service:</strong> Car leasing / local sightseeing.</p>
+</div>
+<div class="contact">
+<h3>Naidu Car & Travels Borra Caves</h3>
+<p><strong>Address:</strong> Railway Station, Muliguda–Borra Caves Road, Jakariguda, Andhra Pradesh 535145.</p>
+<p class="phone">+91 6304417372</p>
+<p><strong>Service:</strong> Local car hire; listed as open 24 hours.</p>
+</div>
+<div class="contact">
+<h3>Abhi Cars</h3>
+<p><strong>Address:</strong> Konapuram Village, Ananthagiri Mandal, Andhra Pradesh 531149.</p>
+<p class="phone">+91 9000197475</p>
+<p><strong>Service:</strong> Travel agency / car arrangements; listed as open 24 hours.</p>
+</div>
+</div>
+</section>
+
+<div class="print-break"></div>
+
+<section class="section">
+<h2 class="section-title">Car-fare comparison and booking strategy</h2>
+<table>
+<thead><tr><th>Provider / source</th><th>Vehicle / package</th><th>Published fare</th><th>What it means for this trip</th></tr></thead>
+<tbody>
+<tr><td>Go2India</td><td>AC Innova, Vizag → Araku day trip including Borra Caves and Araku sightseeing</td><td class="amount">₹5,000</td><td>Strong budget benchmark for a single-day full route; older published tariff, so reconfirm for Oct 2026. citeturn3search4</td></tr>
+<tr><td>ArakuTrip</td><td>Innova Crysta one-way Vizag → Araku</td><td class="amount">₹7,000+</td><td>Fuel + driver included; tolls extra. October–January is peak booking period. citeturn3search0turn3search3</td></tr>
+<tr><td>ArakuTrip</td><td>Innova Crysta 1-day round trip</td><td class="amount">₹8,000+</td><td>Includes Borra Caves and sightseeing waiting time; tolls extra. citeturn3search0</td></tr>
+<tr><td>ArakuTrip</td><td>Araku local Side A</td><td class="amount">₹4,000/day</td><td>Borra Caves + coffee plantation + Wooden Bridge + Galikonda; parking/fuel/driver included. citeturn3search6</td></tr>
+<tr><td>ArakuTrip</td><td>Araku local Side B</td><td class="amount">₹3,000/day</td><td>Padmapuram + Chocolate Factory + museums + Pinery + Chaparai; parking/fuel/driver included. citeturn3search6</td></tr>
+<tr><td>Vizag Wheels</td><td>2-day Innova, up to 600 km</td><td class="amount">₹11,340 incl. taxes</td><td>Driver/state permit/taxes included; toll and parking excluded. citeturn3search1</td></tr>
+<tr><td>Vizag Wheels</td><td>2-day Dzire/Verna, up to 500 km</td><td class="amount">₹6,825 incl. taxes</td><td>Cheapest practical private-car benchmark; 4 seats. citeturn3search1</td></tr>
+</tbody>
+</table>
+<div class="ok" style="margin-top:15px">
+<strong>Lowest-cost car plan:</strong> book a <strong>sedan</strong> for 24–25 October locally, target about <strong>₹6,000–₹7,000</strong> after negotiating the two-day route, and use public buses for the intercity sectors. For three adults, this is materially cheaper than keeping an Innova for the entire journey.
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">Four-times fooding plan</h2>
+<table>
+<thead><tr><th>Daily meal</th><th>Budget / person</th><th>For 3 adults</th><th>Low-cost food choice</th></tr></thead>
+<tbody>
+<tr><td>Breakfast</td><td>₹40–₹60</td><td>₹120–₹180</td><td>Idli, dosa, poha, upma, tea.</td></tr>
+<tr><td>Lunch</td><td>₹70–₹100</td><td>₹210–₹300</td><td>Veg thali / rice, dal, curry.</td></tr>
+<tr><td>Evening snack</td><td>₹30–₹50</td><td>₹90–₹150</td><td>Tea + banana / local snack.</td></tr>
+<tr><td>Dinner</td><td>₹70–₹100</td><td>₹210–₹300</td><td>Rice/roti + dal + vegetable / egg curry.</td></tr>
+<tr><td><strong>Daily total</strong></td><td class="amount">₹210–₹310</td><td class="amount">₹630–₹930</td><td>Keep ₹250/person/day as the planning target.</td></tr>
+</tbody>
+</table>
+<p><strong>Four-day food reserve for 3 adults:</strong> approximately <span class="amount">₹2,520–₹3,720</span>. Add ₹300–₹500 for train-day snacks/water if desired.</p>
+</section>
+
+<section class="section">
+<h2 class="section-title">Detailed budget for the complete group</h2>
+<div class="total">
+<h3>Recommended working envelope</h3>
+<div class="big">₹30,000 – ₹36,000</div>
+<p>for 3 adults, using 2A rail, budget hotels, public buses and a negotiated local sedan.</p>
+</div>
+
+<table style="margin-top:16px">
+<thead><tr><th>Expense head</th><th>Low estimate</th><th>Comfortable budget</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>2A Kolkata → Vizag</td><td>₹5,295</td><td>₹5,430</td><td>Using ₹1,765–₹1,810/person benchmarks. citeturn2search8turn2search10</td></tr>
+<tr><td>2A Vizag → Kolkata</td><td>₹5,250</td><td>₹5,430</td><td>Using current 2A route benchmarks. citeturn2search13turn2search2</td></tr>
+<tr><td>Vizag → Araku bus</td><td>₹450</td><td>₹750</td><td>Reserve ₹150–₹250/person.</td></tr>
+<tr><td>Araku → Vizag bus</td><td>₹459</td><td>₹750</td><td>Current Ultra Deluxe listing is ₹153/person. citeturn1search9</td></tr>
+<tr><td>Hotels, 2 nights</td><td>₹3,100</td><td>₹4,700</td><td>1 triple/family room where available.</td></tr>
+<tr><td>Local car, 2 days</td><td>₹6,000</td><td>₹8,000</td><td>Sedan target; Innova costs more. Published benchmarks support this range. citeturn3search4turn3search6</td></tr>
+<tr><td>Food, 4 times/day</td><td>₹2,520</td><td>₹3,720</td><td>₹210–₹310/person/day × 3 × 4 days.</td></tr>
+<tr><td>Local city autos/bus</td><td>₹600</td><td>₹1,000</td><td>Shared/local transport.</td></tr>
+<tr><td>Entry tickets / small fees</td><td>₹600</td><td>₹1,200</td><td>Keep a reserve; actual tickets can change.</td></tr>
+<tr><td>Water/snacks/misc.</td><td>₹500</td><td>₹800</td><td>Carry a reusable bottle.</td></tr>
+<tr><td><strong>Estimated total</strong></td><td class="amount">₹24,724</td><td class="amount">₹31,780</td><td><strong>Add ₹3,000–₹4,000 contingency</strong> to avoid a tight budget.</td></tr>
+</tbody>
+</table>
+
+<div class="grid" style="margin-top:16px">
+<div class="metric"><small>Per adult — low target</small><strong>≈ ₹9,240</strong><span>before contingency</span></div>
+<div class="metric"><small>Per adult — comfortable</small><strong>≈ ₹10,593</strong><span>before contingency</span></div>
+<div class="metric"><small>Group contingency</small><strong>₹3k–₹4k</strong><span>recommended reserve</span></div>
+</div>
+</section>
+
+<div class="print-break"></div>
+
+<section class="section">
+<h2 class="section-title">Cost allocation graphic</h2>
+<div class="card">
+<svg viewBox="0 0 900 410" role="img" aria-label="Indicative budget allocation">
+<text x="20" y="30" font-size="18" font-weight="800" fill="#172033">Comfortable planning budget: ₹31,780</text>
+<g transform="translate(20,55)">
+<text x="0" y="25" font-size="14" fill="#172033">Rail – outbound</text><rect x="150" y="10" width="530" height="24" rx="12" fill="#e8ebf3"/><rect x="150" y="10" width="390" height="24" rx="12" fill="#5b86e5"/><text x="695" y="28" font-size="14" fill="#172033">₹5,430</text>
+<text x="0" y="75" font-size="14" fill="#172033">Rail – return</text><rect x="150" y="60" width="530" height="24" rx="12" fill="#e8ebf3"/><rect x="150" y="60" width="390" height="24" rx="12" fill="#8e54e9"/><text x="695" y="78" font-size="14" fill="#172033">₹5,430</text>
+<text x="0" y="125" font-size="14" fill="#172033">Local car</text><rect x="150" y="110" width="530" height="24" rx="12" fill="#e8ebf3"/><rect x="150" y="110" width="575" height="24" rx="12" fill="#ff6b6b"/><text x="695" y="128" font-size="14" fill="#172033">₹8,000</text>
+<text x="0" y="175" font-size="14" fill="#172033">Hotels</text><rect x="150" y="160" width="530" height="24" rx="12" fill="#e8ebf3"/><rect x="150" y="160" width="338" height="24" rx="12" fill="#36d1dc"/><text x="695" y="178" font-size="14" fill="#172033">₹4,700</text>
+<text x="0" y="225" font-size="14" fill="#172033">Food</text><rect x="150" y="210" width="530" height="24" rx="12" fill="#e8ebf3"/><rect x="150" y="210" width="268" height="24" rx="12" fill="#ffc371"/><text x="695" y="228" font-size="14" fill="#172033">₹3,720</text>
+<text x="0" y="275" font-size="14" fill="#172033">Buses</text><rect x="150" y="260" width="530" height="24" rx="12" fill="#e8ebf3"/><rect x="150" y="260" width="108" height="24" rx="12" fill="#65c18c"/><text x="695" y="278" font-size="14" fill="#172033">₹1,500</text>
+<text x="0" y="325" font-size="14" fill="#172033">Other / local</text><rect x="150" y="310" width="530" height="24" rx="12" fill="#e8ebf3"/><rect x="150" y="310" width="210" height="24" rx="12" fill="#f08ce3"/><text x="695" y="328" font-size="14" fill="#172033">₹2,500</text>
+</g>
+</svg>
+</div>
+</section>
+
+<section class="section card">
+<h2 class="section-title">What to book, in order</h2>
+<ol>
+<li><strong>Rail first:</strong> reserve 3 × 2A seats Kolkata → Visakhapatnam for 22 Oct and 3 × 2A seats Visakhapatnam → Kolkata for the night of 25 Oct.</li>
+<li><strong>Araku hotel next:</strong> call Ushodaya and Krishna Tara and ask specifically for a 3-adult room for 24 Oct, including all taxes.</li>
+<li><strong>Visakhapatnam hotel:</strong> ask Shree Lakshmi for a triple/family room for 23 Oct and confirm early check-in after the train arrival.</li>
+<li><strong>Car:</strong> call at least three local operators and ask for a written all-inclusive quote for 24–25 Oct: Araku local sightseeing + Borra Caves + drop to Vizag on 25 Oct.</li>
+<li><strong>Bus backup:</strong> do not depend on luxury AC. Keep APSRTC Ultra Deluxe / Express as the fallback. Official APSRTC information confirms frequent Visakhapatnam–Araku services, while current online listings show the lower-cost route fares. citeturn0search0turn1search9</li>
+<li><strong>Meals:</strong> budget ₹250/person/day and carry dry food for the trains.</li>
+</ol>
+</section>
+
+<section class="section card">
+<h2 class="section-title">Contact call script</h2>
+<p><strong>Hotel:</strong> “We are 3 adults travelling 22–26 October 2026. We need one budget room on 23 October in Visakhapatnam / 24 October in Araku. Please quote the final room price including tax, check-in/check-out, breakfast if any, extra-person charge and cancellation terms.”</p>
+<p><strong>Car:</strong> “Three adults. Need an AC sedan with driver on 24 and 25 October. Route: Araku local sightseeing, Borra Caves, viewpoints, and drop at Visakhapatnam railway station. Please give a fixed total including fuel, driver, parking, permits and tolls, and separately state anything excluded.”</p>
+<p><strong>Bus:</strong> “Please confirm the exact service type, departure time, boarding point, drop point and final fare for 3 adults on 24 October and 25 October 2026.”</p>
+</section>
+
+<section class="section">
+<h2 class="section-title">Sources and verification links</h2>
+<ul>
+<li>APSRTC Visakhapatnam tourist-service information: <a href="https://www.apsrtc.ap.gov.in/T_Visakhapatnam.php" target="_blank">apsrtc.ap.gov.in/T_Visakhapatnam.php</a></li>
+<li>APSRTC coach/service information: <a href="https://www.apsrtc.ap.gov.in/Coach_wise_Facilities.php" target="_blank">apsrtc.ap.gov.in/Coach_wise_Facilities.php</a></li>
+<li>Ushodaya Resorts contact: <a href="https://www.ushodayaresortsaraku.com/contact.html" target="_blank">ushodayaresortsaraku.com/contact.html</a></li>
+<li>Shree Lakshmi Guest House contact: <a href="https://www.shreelakshmistay.com/Contactus.html" target="_blank">shreelakshmistay.com/Contactus.html</a></li>
+<li>Araku/Borra Caves access information: <a href="https://www.borracaves.in/how-to-reach.php" target="_blank">borracaves.in/how-to-reach.php</a></li>
+<li>Current rail fare/timetable reference: <a href="https://www.redbus.in/train-tickets/kolkata-to-vishakhapatnam-trains" target="_blank">Kolkata–Visakhapatnam train listings</a></li>
+<li>Current bus fare reference: <a href="https://www.redbus.in/bus-tickets/visakhapatnam-to-araku" target="_blank">Visakhapatnam–Araku bus listings</a></li>
+</ul>
+</section>
+
+<div class="footer">
+Prepared as a practical, budget-led travel document for 3 adults, 22–26 October 2026. Published fares and contact details should be reconfirmed directly before payment, especially for October peak-season travel.
+</div>
 
 </div>
 </body>
