@@ -1,447 +1,667 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silk Route Expedition - 6 Days Plan</title>
-    <style>
-        :root {
-            --primary-bg: #0f172a;
-            --card-bg: #1e293b;
-            --accent-blue: #38bdf8;
-            --accent-green: #34d399;
-            --accent-yellow: #facc15;
-            --accent-pink: #f472b6;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--primary-bg);
-            color: var(--text-main);
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .header {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #0284c7 0%, #7e22ce 100%);
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-            margin-bottom: 30px;
-        }
-
-        .header h1 {
-            font-size: 2.2rem;
-            margin: 0 0 10px 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
-            letter-spacing: 1px;
-        }
-
-        .header p {
-            font-size: 1.1rem;
-            color: #e2e8f0;
-            margin: 0;
-        }
-
-        .badge-container {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .badge {
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 0.9rem;
-            backdrop-filter: blur(5px);
-        }
-
-        .day-card {
-            background-color: var(--card-bg);
-            border-left: 6px solid var(--accent-blue);
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            transition: transform 0.2s ease;
-        }
-
-        .day-card:hover {
-            transform: translateY(-3px);
-        }
-
-        .day-title {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #334155;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-            flex-wrap: wrap;
-        }
-
-        .day-title h2 {
-            margin: 0;
-            color: var(--accent-blue);
-            font-size: 1.3rem;
-        }
-
-        .day-title .route {
-            background-color: #334155;
-            color: var(--accent-yellow);
-            padding: 4px 12px;
-            border-radius: 6px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        .details-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .detail-box {
-            background-color: rgba(15, 23, 42, 0.6);
-            padding: 12px 15px;
-            border-radius: 8px;
-            border: 1px solid #334155;
-        }
-
-        .detail-box strong {
-            color: var(--accent-green);
-            display: block;
-            margin-bottom: 5px;
-            font-size: 0.95rem;
-        }
-
-        .highlight-list {
-            list-style-type: none;
-            padding-left: 0;
-            margin: 10px 0 0 0;
-        }
-
-        .highlight-list li {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 6px;
-            font-size: 0.95rem;
-        }
-
-        .highlight-list li::before {
-            content: "✦";
-            position: absolute;
-            left: 0;
-            color: var(--accent-pink);
-        }
-
-        .budget-section, .logistics-section {
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            padding: 25px;
-            margin-top: 40px;
-            border: 2px solid var(--accent-green);
-        }
-
-        .budget-section h2, .logistics-section h2 {
-            color: var(--accent-green);
-            text-align: center;
-            margin-top: 0;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background-color: rgba(15, 23, 42, 0.6);
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #334155;
-        }
-
-        th {
-            background-color: #0f172a;
-            color: var(--accent-yellow);
-            font-weight: 600;
-        }
-
-        tr:last-child td {
-            border-bottom: none;
-        }
-
-        .total-row {
-            font-weight: bold;
-            background-color: #1e293b;
-            color: var(--accent-green);
-            font-size: 1.1rem;
-        }
-
-        .info-note {
-            background-color: rgba(250, 204, 21, 0.1);
-            border: 1px solid var(--accent-yellow);
-            color: var(--accent-yellow);
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 25px;
-            font-size: 0.9rem;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kolkata – Vizag – Araku – Hyderabad – Kolkata | 15–25 October 2026</title>
+<style>
+  :root {
+    --ink:#172033; --muted:#5d6678; --paper:#fff;
+    --a:#6c2bd9; --b:#00a6a6; --c:#ff7a18; --d:#e83e8c; --e:#0f766e;
+    --line:#e6e9ef; --soft:#f5f7fb; --gold:#f5c84b;
+  }
+  * { box-sizing:border-box; }
+  html,body { margin:0; padding:0; background:#eef1f6; color:var(--ink); font-family:Inter,Segoe UI,Arial,sans-serif; line-height:1.48; }
+  .page { width:210mm; min-height:297mm; margin:12mm auto; padding:16mm 15mm 17mm; background:var(--paper);
+           box-shadow:0 8px 30px rgba(24,33,55,.10); position:relative; overflow:hidden; }
+  .page:after { content:""; position:absolute; top:0; left:0; right:0; height:6px;
+                  background:linear-gradient(90deg,var(--a),var(--d),var(--c),var(--b)); }
+  .hero { border-radius:22px; padding:22px; color:#fff; position:relative; overflow:hidden;
+           background:linear-gradient(135deg,#4b1fa8 0%,#9c2fbd 38%,#f45b2a 72%,#ffb300 100%); }
+  .hero:before,.hero:after { content:""; position:absolute; border-radius:50%; filter:blur(2px); opacity:.22; }
+  .hero:before { width:180px;height:180px;right:-55px;top:-60px;background:#fff; }
+  .hero:after { width:120px;height:120px;left:-35px;bottom:-55px;background:#00ffe1; }
+  .hero > * { position:relative; z-index:1; }
+  .eyebrow { text-transform:uppercase; letter-spacing:2px; font-weight:800; font-size:11px; opacity:.9; }
+  h1 { margin:7px 0 9px; font-size:34px; line-height:1.08; }
+  h2 { font-size:23px; margin:0 0 12px; }
+  h3 { font-size:16px; margin:18px 0 8px; }
+  p { margin:7px 0; }
+  .sub { font-size:15px; max-width:760px; opacity:.95; }
+  .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:15px; }
+  .chip { background:rgba(255,255,255,.17); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:7px 11px; font-weight:700; font-size:12px; }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:14px 0; }
+  .grid2 { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
+  .card { border:1px solid var(--line); border-radius:16px; padding:14px; background:#fff; }
+  .card.soft { background:linear-gradient(180deg,#fbfcff,#f3f5fa); }
+  .accent { border-left:5px solid var(--c); }
+  .teal { border-left:5px solid var(--b); }
+  .purple { border-left:5px solid var(--a); }
+  .pink { border-left:5px solid var(--d); }
+  .metric { font-size:25px; font-weight:900; margin-top:3px; }
+  .label { font-size:11px; text-transform:uppercase; letter-spacing:1px; color:var(--muted); font-weight:800; }
+  .small { font-size:11px; color:var(--muted); }
+  .note { background:#fff7e6; border:1px solid #f7d98b; border-radius:12px; padding:11px 13px; }
+  .warning { background:#fff1f4; border:1px solid #f3b4c6; border-radius:12px; padding:11px 13px; }
+  .success { background:#ecfbf7; border:1px solid #a9e5d7; border-radius:12px; padding:11px 13px; }
+  table { width:100%; border-collapse:collapse; font-size:11.5px; }
+  th { background:#19233a; color:#fff; text-align:left; padding:9px 8px; }
+  td { padding:8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  tr:nth-child(even) td { background:#fafbfe; }
+  .right { text-align:right; }
+  .tag { display:inline-block; border-radius:999px; padding:3px 8px; font-size:10px; font-weight:800; background:#eee8ff; color:#5b27b8; }
+  .day { border:1px solid var(--line); border-radius:17px; margin:11px 0; overflow:hidden; }
+  .dayhead { display:flex; justify-content:space-between; gap:12px; padding:12px 14px; color:#fff;
+              background:linear-gradient(90deg,#3d2b99,#7a2dbb); }
+  .daybody { padding:13px 14px; }
+  .timeline { position:relative; margin:10px 0 2px; padding-left:22px; }
+  .timeline:before { content:""; position:absolute; left:7px; top:4px; bottom:4px; width:2px; background:linear-gradient(var(--a),var(--c),var(--b)); }
+  .event { position:relative; margin:0 0 13px; }
+  .event:before { content:""; position:absolute; left:-20px; top:5px; width:9px; height:9px; border-radius:50%; background:var(--c); box-shadow:0 0 0 3px #fff,0 0 0 5px #ffd8b7; }
+  .time { font-weight:900; color:#5d2ab3; font-size:11px; }
+  .route { font-weight:800; }
+  .budgetbar { height:15px; border-radius:999px; overflow:hidden; background:#eceff5; display:flex; margin:10px 0; }
+  .seg1 { background:#6c2bd9; } .seg2 { background:#00a6a6; } .seg3 { background:#ff7a18; }
+  .seg4 { background:#e83e8c; } .seg5 { background:#f5c84b; }
+  .legend { display:flex; flex-wrap:wrap; gap:10px; font-size:10px; color:var(--muted); }
+  .dot { width:9px;height:9px;display:inline-block;border-radius:50%;margin-right:4px; }
+  .routeband { display:grid; grid-template-columns:1fr auto 1fr auto 1fr auto 1fr; gap:6px; align-items:center; margin:16px 0; }
+  .stop { border-radius:14px; padding:11px 8px; text-align:center; background:#f5f7fb; border:1px solid var(--line); font-weight:900; font-size:12px; }
+  .arrow { color:#7a2dbb; font-weight:900; }
+  .contact { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .contact .card { min-height:140px; }
+  .footer { position:absolute; bottom:7mm; left:15mm; right:15mm; display:flex; justify-content:space-between;
+             font-size:9px; color:#7a8190; border-top:1px solid var(--line); padding-top:5px; }
+  .pagebreak { break-before:page; page-break-before:always; }
+  .avoid { break-inside:avoid; page-break-inside:avoid; }
+  a { color:#5d2ab3; text-decoration:none; border-bottom:1px dotted #8e6ad6; }
+  ul { margin:6px 0 8px 18px; padding:0; }
+  li { margin:3px 0; }
+  .checklist li::marker { color:#6c2bd9; }
+  .source { font-size:9.5px; color:#626b7b; word-break:break-all; }
+  .bigtotal { font-size:34px; font-weight:950; color:#4f1db3; }
+  .twocol { columns:2; column-gap:22px; }
+  .twocol p,.twocol li { break-inside:avoid; }
+  @media print {
+    body { background:#fff; }
+    .page { width:auto; min-height:297mm; margin:0; box-shadow:none; padding:14mm 14mm 17mm; }
+    .pagebreak { break-before:page; page-break-before:always; }
+    a { color:inherit; border-bottom:0; }
+  }
+  @media (max-width:900px) {
+    .page { width:100%; margin:0; padding:18px; }
+    .grid,.grid2,.contact { grid-template-columns:1fr; }
+    .routeband { grid-template-columns:1fr; }
+    .arrow { transform:rotate(90deg); text-align:center; }
+  }
+</style>
 </head>
 <body>
 
-<div class="container">
+<section class="page">
+  <div class="hero">
+    <div class="eyebrow">10-Night / 11-Day Budget Expedition · 3 Adults</div>
+    <h1>Kolkata → Vizag → Araku → Hyderabad → Kolkata</h1>
+    <div class="sub">15 October 2026 to 25 October 2026 · A colourful, practical, very-low-budget travel plan built around rail travel, one overnight luxury AC bus, economical stays, local cars and four budget meals a day.</div>
+    <div class="chips">
+      <span class="chip">₹45,909 working ceiling</span>
+      <span class="chip">₹15,303/person approx.</span>
+      <span class="chip">3 Adults</span>
+      <span class="chip">Sleeper rail + AC bus</span>
+      <span class="chip">6 hotel nights</span>
+    </div>
+  </div>
 
-    <div class="header">
-        <h1>⛰️ Silk Route Expedition (Sikkim & West Bengal)</h1>
-        <p>6 Days Offbeat Scenic Circuit Tour Plan (Optimized for Women Safety & Comfort)</p>
-        <div class="badge-container">
-            <span class="badge">📅 Dates: 19/10/2026 – 24/10/2026</span>
-            <span class="badge">👥 Group Size: 6 Persons (All Girls Group)</span>
-            <span class="badge">💰 Budget: ₹7,000 / Head</span>
-        </div>
+  <div class="routeband">
+    <div class="stop">KOLKATA<br><span class="small">15 Oct</span></div><div class="arrow">→</div>
+    <div class="stop">VISAKHAPATNAM<br><span class="small">16–17 Oct</span></div><div class="arrow">→</div>
+    <div class="stop">ARAKU<br><span class="small">17–19 Oct</span></div><div class="arrow">→</div>
+    <div class="stop">HYDERABAD<br><span class="small">20–23 Oct</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="card purple"><div class="label">Travel style</div><div class="metric">Very Low</div><p class="small">No flights; sleeper rail, economical AC bus and shared/local movement wherever practical.</p></div>
+    <div class="card teal"><div class="label">Core transport</div><div class="metric">4 legs</div><p class="small">Kolkata–Vizag rail · Vizag–Araku rail · Vizag–Hyderabad AC bus · Hyderabad–Kolkata rail.</p></div>
+    <div class="card accent"><div class="label">Food allowance</div><div class="metric">₹1,200/day</div><p class="small">3 adults × 4 meals × ₹100/person/meal average.</p></div>
+  </div>
+
+  <div class="card soft avoid">
+    <h2>Trip strategy at a glance</h2>
+    <div class="grid2">
+      <div>
+        <h3>Why this route is economical</h3>
+        <ul>
+          <li>Use Sleeper Class for the long rail sectors.</li>
+          <li>Use the Vizag–Araku railway line for the scenic hill journey instead of hiring a car for the full intercity run.</li>
+          <li>Use one overnight AC bus from Vizag to Hyderabad to save a hotel night.</li>
+          <li>Stay near railway/bus hubs so transfers are short and inexpensive.</li>
+          <li>Use one compact sedan for essential sightseeing rather than a premium SUV.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Important booking rule</h3>
+        <p>All fares and room prices in this plan are <b>planning figures</b>, not guaranteed October 2026 quotations. Railway fares, bus fares, dynamic discounts, hotel rates, taxes and availability can change before the journey.</p>
+        <div class="note"><b>October is a busy travel period.</b> Book the Kolkata–Vizag and Hyderabad–Kolkata rail berths as soon as the booking window opens, then lock hotels and the Vizag–Hyderabad AC bus.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer"><span>Budget Tour Plan · 15–25 Oct 2026</span><span>Page 1</span></div>
+</section>
+
+<section class="page pagebreak">
+  <h2>01 · Master Itinerary & Night Plan</h2>
+  <p class="small">The plan deliberately uses overnight travel on 15 Oct, 19 Oct and 23 Oct to reduce paid hotel nights.</p>
+  <table class="avoid">
+    <thead><tr><th>Date</th><th>Day</th><th>Base / Night</th><th>Main movement</th><th>Primary plan</th></tr></thead>
+    <tbody>
+      <tr><td>15 Oct</td><td>Thu</td><td>Train</td><td>Kolkata → Visakhapatnam</td><td>Board overnight Sleeper train; carry dinner, water and light breakfast.</td></tr>
+      <tr><td>16 Oct</td><td>Fri</td><td>Visakhapatnam</td><td>Arrive Vizag</td><td>Hotel check-in; RK Beach, Submarine Museum area, Kailasagiri sunset.</td></tr>
+      <tr><td>17 Oct</td><td>Sat</td><td>Araku</td><td>Vizag → Araku</td><td>Morning scenic train; Tribal Museum, Padmapuram Gardens; Araku market.</td></tr>
+      <tr><td>18 Oct</td><td>Sun</td><td>Araku</td><td>Local sightseeing</td><td>Borra Caves, coffee plantation, viewpoints, waterfalls/tribal attractions.</td></tr>
+      <tr><td>19 Oct</td><td>Mon</td><td>AC bus</td><td>Araku → Vizag → Hyderabad</td><td>Return to Vizag by afternoon/evening train; board overnight luxury AC bus.</td></tr>
+      <tr><td>20 Oct</td><td>Tue</td><td>Hyderabad</td><td>Arrive Hyderabad</td><td>Hotel check-in; Charminar, Laad Bazaar, Mecca Masjid area.</td></tr>
+      <tr><td>21 Oct</td><td>Wed</td><td>Hyderabad</td><td>Local car</td><td>Golconda Fort, Qutb Shahi Tombs, evening Hussain Sagar.</td></tr>
+      <tr><td>22 Oct</td><td>Thu</td><td>Hyderabad</td><td>Local / metro</td><td>Salar Jung Museum, Chowmahalla Palace exterior/area, Birla Mandir.</td></tr>
+      <tr><td>23 Oct</td><td>Fri</td><td>Train</td><td>Hyderabad → Kolkata</td><td>Final Hyderabad half-day; board afternoon/evening overnight train.</td></tr>
+      <tr><td>24 Oct</td><td>Sat</td><td>Train</td><td>En route Kolkata</td><td>Rail journey; packed food + station meals; keep luggage secured.</td></tr>
+      <tr><td>25 Oct</td><td>Sun</td><td>Kolkata</td><td>Arrive Kolkata</td><td>Trip ends after arrival; reserve a small local-transfer buffer.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Paid hotel nights</h3>
+  <div class="grid">
+    <div class="card purple"><div class="label">Vizag</div><div class="metric">2 nights</div><p>16 & 17 Oct</p></div>
+    <div class="card teal"><div class="label">Araku</div><div class="metric">2 nights</div><p>17 & 18 Oct</p></div>
+    <div class="card accent"><div class="label">Hyderabad</div><div class="metric">2 nights</div><p>20 & 21 Oct</p></div>
+  </div>
+
+  <div class="success"><b>Budget-saving logic:</b> the 19 Oct overnight bus and 23 Oct overnight train replace two additional hotel nights. The plan therefore pays for six hotel nights while covering the full 11-calendar-day window.</div>
+  <div class="footer"><span>Master itinerary · 3 adults</span><span>Page 2</span></div>
+</section>
+
+<section class="page pagebreak">
+  <h2>02 · Day-by-Day Detailed Itinerary — Kolkata & Vizag</h2>
+
+  <div class="day">
+    <div class="dayhead"><b>DAY 1 · Thursday, 15 October</b><span>Train Night</span></div>
+    <div class="daybody">
+      <div class="timeline">
+        <div class="event"><div class="time">12:30–14:00</div><div class="route">Kolkata preparation</div><p>Finish lunch before leaving home; pack railway ticket/ID, medicines, water, snacks, light shawl and phone power bank.</p></div>
+        <div class="event"><div class="time">14:00–15:00</div><div class="route">Transfer to Howrah</div><p>Use local metro/bus/taxi according to the group's starting point. Keep at least 60–90 minutes of railway-station buffer.</p></div>
+        <div class="event"><div class="time">~15:00 onward</div><div class="route">Howrah → Visakhapatnam</div><p>Preferred planning service: a direct/through HWH–VSKP train in Sleeper Class. Current published fare examples are around ₹505 per adult one-way; exact 15 Oct 2026 service and fare must be checked when booking.</p></div>
+        <div class="event"><div class="time">Night</div><div class="route">On-board</div><p>Dinner from home/railway station. Avoid unnecessary platform purchases. Sleep on the train.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="dayhead"><b>DAY 2 · Friday, 16 October</b><span>Vizag Day 1</span></div>
+    <div class="daybody">
+      <div class="timeline">
+        <div class="event"><div class="time">Morning</div><div class="route">Arrive Visakhapatnam</div><p>Walk/auto to the station-area budget hotel; deposit luggage if early check-in is unavailable.</p></div>
+        <div class="event"><div class="time">09:00–10:00</div><div class="route">Breakfast + freshen up</div><p>Budget tiffin: idli, dosa, vada, poori or local breakfast with tea.</p></div>
+        <div class="event"><div class="time">10:30–13:00</div><div class="route">Ramakrishna Beach / Submarine Museum area</div><p>Low-cost coastal sightseeing; keep museum entry fees separate from the core budget.</p></div>
+        <div class="event"><div class="time">13:15–14:00</div><div class="route">Lunch</div><p>Vegetarian thali/meals near Dwaraka Nagar or the hotel area.</p></div>
+        <div class="event"><div class="time">15:00–17:00</div><div class="route">Kailasagiri</div><p>Use a compact local car or economical auto combination. Allow time for the hilltop viewpoints.</p></div>
+        <div class="event"><div class="time">17:30–19:00</div><div class="route">Sunset + return</div><p>Return to hotel, rest, dinner, and prepare a small daypack for Araku.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="dayhead"><b>DAY 3 · Saturday, 17 October</b><span>Vizag → Araku</span></div>
+    <div class="daybody">
+      <div class="timeline">
+        <div class="event"><div class="time">05:45–06:30</div><div class="route">Early breakfast</div><p>Tea + light tiffin; reach Visakhapatnam station with luggage.</p></div>
+        <div class="event"><div class="time">07:00–11:00</div><div class="route">VSKP → Araku scenic train</div><p>Economical planning option: 58501 passenger, published daily around 07:00–11:00. Current route fare references show Sleeper around ₹140/adult and 2S around ₹75/adult.</p></div>
+        <div class="event"><div class="time">11:15–12:00</div><div class="route">Hotel / luggage drop</div><p>Check in if room is ready; otherwise leave bags and start nearby sightseeing.</p></div>
+        <div class="event"><div class="time">12:30–13:30</div><div class="route">Lunch</div><p>Simple Andhra/tribal-area meal; avoid resort dining for the very-low-budget plan.</p></div>
+        <div class="event"><div class="time">14:00–17:00</div><div class="route">Tribal Museum + Padmapuram Gardens</div><p>Slow local sightseeing; include only paid attractions that fit the remaining daily allowance.</p></div>
+        <div class="event"><div class="time">18:00–20:00</div><div class="route">Araku market + dinner</div><p>Buy local snacks/coffee only after comparing prices; early sleep.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer"><span>Detailed itinerary · Kolkata + Vizag</span><span>Page 3</span></div>
+</section>
+
+<section class="page pagebreak">
+  <h2>03 · Day-by-Day Detailed Itinerary — Araku & Hyderabad Transfer</h2>
+
+  <div class="day">
+    <div class="dayhead"><b>DAY 4 · Sunday, 18 October</b><span>Araku Full Day</span></div>
+    <div class="daybody">
+      <div class="timeline">
+        <div class="event"><div class="time">07:00</div><div class="route">Breakfast</div><p>Tea + idli/dosa/poori; carry water and a few snacks.</p></div>
+        <div class="event"><div class="time">08:00–12:30</div><div class="route">Borra Caves + surrounding viewpoints</div><p>Hire one compact local car for the day. Confirm whether parking, driver allowance, fuel and any local taxes are included before departure.</p></div>
+        <div class="event"><div class="time">13:00–14:00</div><div class="route">Lunch</div><p>Local dhaba/simple meal on the route; avoid packaged tourist-complex meals where possible.</p></div>
+        <div class="event"><div class="time">14:30–17:30</div><div class="route">Coffee plantation / Chaparai-side or local valley sights</div><p>Choose attractions according to weather and road conditions. Do not force every attraction into one day.</p></div>
+        <div class="event"><div class="time">18:00–20:00</div><div class="route">Araku town</div><p>Return to hotel, dinner and pack luggage for the next day's return to Vizag and overnight bus.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="dayhead"><b>DAY 5 · Monday, 19 October</b><span>Araku → Vizag → Hyderabad</span></div>
+    <div class="daybody">
+      <div class="timeline">
+        <div class="event"><div class="time">07:00–08:00</div><div class="route">Breakfast + check-out</div><p>Keep one small overnight bus bag; larger luggage can be secured in the main baggage.</p></div>
+        <div class="event"><div class="time">09:00–13:00</div><div class="route">Free Araku buffer</div><p>Use this time for coffee, market, short viewpoints or simply rest. This buffer protects the onward connection.</p></div>
+        <div class="event"><div class="time">~15:45–21:00</div><div class="route">Araku → Visakhapatnam</div><p>Published daily option 58502 is around 15:45–21:00; Sleeper fare references are around ₹105–₹140 depending on the source/date. Alternatively, 18516 is a later night train, but that is less suitable for the bus connection.</p></div>
+        <div class="event"><div class="time">21:00–22:00</div><div class="route">Vizag bus boarding</div><p>Move to the confirmed boarding point. Eat a packed dinner before boarding.</p></div>
+        <div class="event"><div class="time">Night</div><div class="route">Visakhapatnam → Hyderabad luxury AC bus</div><p>Budget around ₹1,050/adult. Current AC listings show lower-priced AC sleeper/seater options around ₹1,000–₹1,321, while APSRTC Volvo/Scania can be around ₹1,599+.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="dayhead"><b>DAY 6 · Tuesday, 20 October</b><span>Hyderabad Day 1</span></div>
+    <div class="daybody">
+      <div class="timeline">
+        <div class="event"><div class="time">Morning</div><div class="route">Arrive Hyderabad</div><p>Transfer to Secunderabad-area hotel; request early luggage drop. Breakfast near station.</p></div>
+        <div class="event"><div class="time">10:30–13:30</div><div class="route">Charminar + Laad Bazaar</div><p>Use Metro/auto for economical movement. Keep valuables secure in crowded lanes.</p></div>
+        <div class="event"><div class="time">13:30–14:30</div><div class="route">Lunch</div><p>Budget biryani/meal or vegetarian thali; keep portions practical.</p></div>
+        <div class="event"><div class="time">15:30–18:00</div><div class="route">Mecca Masjid / old-city walk</div><p>Respect local entry/photography rules. Return before late-evening crowd congestion.</p></div>
+        <div class="event"><div class="time">19:00–20:30</div><div class="route">Dinner + hotel</div><p>Rest after the overnight bus.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer"><span>Detailed itinerary · Araku + Hyderabad transfer</span><span>Page 4</span></div>
+</section>
+
+<section class="page pagebreak">
+  <h2>04 · Day-by-Day Detailed Itinerary — Hyderabad & Return</h2>
+
+  <div class="day">
+    <div class="dayhead"><b>DAY 7 · Wednesday, 21 October</b><span>Hyderabad Heritage</span></div>
+    <div class="daybody">
+      <div class="timeline">
+        <div class="event"><div class="time">07:30–08:30</div><div class="route">Breakfast</div><p>Simple tiffin at a local eatery.</p></div>
+        <div class="event"><div class="time">09:00–13:00</div><div class="route">Golconda Fort</div><p>Hire compact AC car for the main sightseeing block. Confirm all charges before starting.</p></div>
+        <div class="event"><div class="time">13:15–14:15</div><div class="route">Lunch</div><p>Local restaurant on the return route.</p></div>
+        <div class="event"><div class="time">14:30–16:00</div><div class="route">Qutb Shahi Tombs</div><p>Keep enough time for a relaxed visit rather than rushing.</p></div>
+        <div class="event"><div class="time">17:00–19:00</div><div class="route">Hussain Sagar / Tank Bund</div><p>Sunset walk; avoid expensive boat packages unless specifically desired.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="dayhead"><b>DAY 8 · Thursday, 22 October</b><span>Hyderabad Culture Day</span></div>
+    <div class="daybody">
+      <div class="timeline">
+        <div class="event"><div class="time">08:00–09:00</div><div class="route">Breakfast</div><p>Budget tiffin + tea.</p></div>
+        <div class="event"><div class="time">09:30–12:30</div><div class="route">Salar Jung Museum</div><p>Allow enough time for the main galleries; check current opening/holiday rules before travel.</p></div>
+        <div class="event"><div class="time">12:45–14:00</div><div class="route">Lunch</div><p>Simple local meal.</p></div>
+        <div class="event"><div class="time">14:15–16:00</div><div class="route">Chowmahalla Palace area</div><p>Visit if open and within the attraction allowance; otherwise use the time for old-city exploration.</p></div>
+        <div class="event"><div class="time">17:00–19:00</div><div class="route">Birla Mandir / city viewpoint</div><p>Return by Metro/auto to keep the car bill down.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="dayhead"><b>DAY 9 · Friday, 23 October</b><span>Final Hyderabad + Train</span></div>
+    <div class="daybody">
+      <div class="timeline">
+        <div class="event"><div class="time">07:30–09:00</div><div class="route">Breakfast + check-out</div><p>Leave luggage at hotel if permitted.</p></div>
+        <div class="event"><div class="time">09:30–12:00</div><div class="route">Free-choice local visit</div><p>Use a low-cost Metro/auto trip for a market, park or shopping stop; avoid adding a new long-distance excursion.</p></div>
+        <div class="event"><div class="time">12:00–13:00</div><div class="route">Lunch</div><p>Final Hyderabad meal; buy train snacks for the long return journey.</p></div>
+        <div class="event"><div class="time">13:00–15:00</div><div class="route">Collect luggage + station transfer</div><p>Reach Secunderabad/Charlapalli/Hyderabad station as dictated by the booked train.</p></div>
+        <div class="event"><div class="time">Afternoon/evening</div><div class="route">Hyderabad → Kolkata</div><p>Preferred budget benchmark: Sleeper Class. Current published examples show around ₹690–₹855 on some services; 12704 Falaknuma is around ₹710 in current listings.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="day">
+    <div class="dayhead"><b>DAYS 10–11 · Saturday–Sunday, 24–25 October</b><span>Return Rail + End</span></div>
+    <div class="daybody">
+      <div class="timeline">
+        <div class="event"><div class="time">24 Oct</div><div class="route">On train</div><p>Breakfast, lunch, tea and dinner using packed food + railway pantry/station meals. Keep valuables and tickets together.</p></div>
+        <div class="event"><div class="time">25 Oct</div><div class="route">Arrive Kolkata</div><p>Trip ends after arrival. Keep ₹500–₹1,000 per person outside the main budget if a last-mile taxi is required.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="warning"><b>Connection protection:</b> do not book a bus/train with a very tight connection after the Araku sector. The plan intentionally leaves a buffer in Vizag before the overnight Hyderabad bus and uses an overnight Hyderabad→Kolkata rail leg.</div>
+  <div class="footer"><span>Detailed itinerary · Hyderabad + return</span><span>Page 5</span></div>
+</section>
+
+<section class="page pagebreak">
+  <h2>05 · Transport, Train & Luxury AC Bus Fare Sheet</h2>
+
+  <h3>Kolkata → Visakhapatnam — rail</h3>
+  <table>
+    <thead><tr><th>Class</th><th>Published planning fare/adult</th><th>3 adults</th><th>Budget choice</th></tr></thead>
+    <tbody>
+      <tr><td>Sleeper (SL)</td><td>~₹505</td><td>~₹1,515</td><td><span class="tag">BEST</span></td></tr>
+      <tr><td>3E</td><td>~₹1,200</td><td>~₹3,600</td><td>Only if sleeper unavailable</td></tr>
+      <tr><td>3A</td><td>~₹1,290</td><td>~₹3,870</td><td>Comfort upgrade</td></tr>
+      <tr><td>2A</td><td>~₹1,810</td><td>~₹5,430</td><td>Not aligned with very-low budget</td></tr>
+    </tbody>
+  </table>
+  <p class="small">Current published listings show several HWH–VSKP services around these fare levels; exact train, quota and 15 Oct 2026 availability must be verified at booking.</p>
+
+  <h3>Visakhapatnam ↔ Araku — rail</h3>
+  <table>
+    <thead><tr><th>Sector</th><th>Service reference</th><th>Approx. time</th><th>SL / 2S planning fare</th><th>3 adults</th></tr></thead>
+    <tbody>
+      <tr><td>VSKP → ARK</td><td>58501</td><td>07:00–11:00</td><td>SL ~₹140 / 2S ~₹75</td><td>SL ~₹420</td></tr>
+      <tr><td>ARK → VSKP</td><td>58502</td><td>15:45–21:00</td><td>SL ~₹105–₹140</td><td>~₹315–₹420</td></tr>
+      <tr><td>ARK → VSKP alternate</td><td>18516</td><td>23:15–03:40</td><td>SL ~₹150</td><td>~₹450</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Visakhapatnam → Hyderabad — luxury AC bus options</h3>
+  <table>
+    <thead><tr><th>Operator / service</th><th>Type</th><th>Published fare from</th><th>3-adult planning cost</th><th>Use</th></tr></thead>
+    <tbody>
+      <tr><td>IntrCity SmartBus</td><td>AC Sleeper 2+1</td><td>₹1,039+</td><td>₹3,117+</td><td>Strong budget pick</td></tr>
+      <tr><td>Shyamoli Paribahan</td><td>AC Sleeper 2+1</td><td>₹1,000+</td><td>₹3,000+</td><td>Strong budget pick</td></tr>
+      <tr><td>zingbus plus</td><td>VE AC Sleeper</td><td>₹1,001+</td><td>₹3,003+</td><td>Strong budget pick</td></tr>
+      <tr><td>Pramukh Travels</td><td>Volvo 9600 SLX AC Multiaxle Sleeper</td><td>₹1,321+</td><td>₹3,963+</td><td>Comfort upgrade</td></tr>
+      <tr><td>APSRTC</td><td>Amaravathi Volvo/Scania AC Multiaxle Semi Sleeper</td><td>₹1,599+</td><td>₹4,797+</td><td>Premium government option</td></tr>
+      <tr><td>TGSRTC</td><td>Lahari AC Seater/Sleeper 2+1</td><td>₹1,272+</td><td>₹3,816+</td><td>Good alternative</td></tr>
+    </tbody>
+  </table>
+  <div class="note"><b>Bus fare note:</b> these are currently published reference fares, not guaranteed 19 Oct 2026 fares. Dynamic pricing and seat category can change. For the very-low budget, target an AC sleeper around ₹1,000–₹1,150/adult and book early.</div>
+
+  <h3>Hyderabad → Kolkata — rail</h3>
+  <table>
+    <thead><tr><th>Class</th><th>Current planning range/adult</th><th>3 adults</th><th>Budget choice</th></tr></thead>
+    <tbody>
+      <tr><td>Sleeper</td><td>~₹690–₹855</td><td>~₹2,070–₹2,565</td><td><span class="tag">BEST</span></td></tr>
+      <tr><td>3E</td><td>~₹1,650–₹1,695</td><td>~₹4,950–₹5,085</td><td>Comfort upgrade</td></tr>
+      <tr><td>3A</td><td>~₹1,755–₹2,120</td><td>~₹5,265–₹6,360</td><td>Comfort upgrade</td></tr>
+      <tr><td>2A</td><td>~₹2,510–₹2,930</td><td>~₹7,530–₹8,790</td><td>Not aligned with budget</td></tr>
+    </tbody>
+  </table>
+
+  <div class="footer"><span>Transport fare sheet · planning values</span><span>Page 6</span></div>
+</section>
+
+<section class="page pagebreak">
+  <h2>06 · Hotels — Complete Contact Details & Budget Targets</h2>
+
+  <div class="contact">
+    <div class="card purple avoid">
+      <h3>VISAKHAPATNAM · Hotel Akshaya</h3>
+      <p><b>Address:</b> Opp. DRM Office, Railway Station Road, Dondaparthi, Visakhapatnam – 530016, Andhra Pradesh.</p>
+      <p><b>Telephone:</b> +91 89125 33188</p>
+      <p><b>Mobile:</b> +91 917 789 2359 · +91 917 732 0359</p>
+      <p><b>Email:</b> reserve@hotelakshaya.in</p>
+      <p><b>Room reference:</b> Non-AC double around ₹1,280 incl. listed tax; Executive Double around ₹1,657.60 incl. listed tax on the hotel's current tariff page.</p>
+      <p><b>Recommended booking:</b> ask for one room accommodating 3 adults or two lowest-cost rooms if triple occupancy is unavailable.</p>
+      <p><a href="https://hotelakshaya.in/contacts-Hotel-Akshaya-visakhapatnam.html">Hotel contact page</a> · <a href="https://hotelakshaya.in/rooms.html">Room tariff</a></p>
     </div>
 
-    <!-- Day 1 -->
-    <div class="day-card" style="border-left-color: #38bdf8;">
-        <div class="day-title">
-            <h2>Day 1: Arrival at NJP to Icche Gaon</h2>
-            <span class="route">NJP / Siliguri ➔ Kalimpong ➔ Icche Gaon (88 km / 4 hrs)</span>
-        </div>
-        <p><strong>Detailed Timing Adjusted Roadmap:</strong> 08:00 AM - Pickup from NJP Railway Station by reserved vehicle. 10:30 AM - Short breakfast/tea break near Kalimpong bypass. 12:30 PM - Arrival at Icche Gaon, check-in, and document verification. 01:30 PM - Traditional lunch. 04:00 PM - Silent Valley sunset and pine forest village walk. 07:30 PM - Dinner and overnight stay.</p>
-        <div class="details-grid">
-            <div class="detail-box">
-                <strong>📍 Highlights & Accommodation</strong>
-                <ul class="highlight-list">
-                    <li><strong>Hotel/Homestay:</strong> Pine View Eco Homestay, Icche Gaon (Contact: +91-9832012345 / Verified safe for women, proper hot water geysers, purified drinking water, 24/7 room service).</li>
-                    <li><strong>Check-in / Check-out:</strong> Check-in: 12:00 PM | Check-out: 10:00 AM next day.</li>
-                    <li>Silent Valley sunset views & Kanchenjunga panorama.</li>
-                </ul>
-            </div>
-            <div class="detail-box">
-                <strong>🍴 Meals & Lodging</strong>
-                Lunch, Evening Tea & Snacks, Dinner included. Lodging at Pine View Eco Homestay.
-            </div>
-        </div>
+    <div class="card teal avoid">
+      <h3>ARAKU · Akshaya Inn</h3>
+      <p><b>Address:</b> Araku Valley – Pachipenta Village, opposite MRO Office, Kantabamsuguda, Andhra Pradesh 531149.</p>
+      <p><b>Phone:</b> +91 63049 79788</p>
+      <p><b>Budget reference:</b> current local accommodation listings show Akshaya Inn around ₹1,800/night; lower-priced Signature Stay listings are around ₹1,400/night.</p>
+      <p><b>Recommended booking:</b> ask for a 3-adult room first; if unavailable, compare Signature Stay / SK INN against Akshaya Inn before paying an advance.</p>
+      <p><a href="https://www.google.co.in/travel/hotels/entity/ChoIv4TVvODl8oDbARoNL2cvMTFoMDBjX2YxNhAB">Property/contact reference</a> · <a href="https://araku-valley.com/our-rooms/">Araku room listings</a></p>
     </div>
 
-    <!-- Day 2 -->
-    <div class="day-card" style="border-left-color: #34d399;">
-        <div class="day-title">
-            <h2>Day 2: Icche Gaon to Sillery Gaon & Reshikhola</h2>
-            <span class="route">Icche Gaon ➔ Sillery Gaon ➔ Pedong ➔ Reshikhola (45 km / 3 hrs)</span>
-        </div>
-        <p><strong>Detailed Timing Adjusted Roadmap:</strong> 05:30 AM - Sunrise viewing. 08:00 AM - Breakfast and check-out. 09:00 AM - Drive to Sillery Gaon, trek to Ramitey Dara viewpoint. 11:30 AM - Explore Damsang Fort ruins. 01:00 PM - Lunch at Pedong. 03:00 PM - Descend to Reshikhola river valley, check-in, and relax by the riverside. 08:00 PM - Dinner.</p>
-        <div class="details-grid">
-            <div class="detail-box">
-                <strong>📍 Highlights & Accommodation</strong>
-                <ul class="highlight-list">
-                    <li><strong>Hotel/Homestay:</strong> Reshi River Eco Resort / Homestay, Reshikhola (Contact: +91-9734987654 / Gated secure riverside property, reliable hot water arrangement, safe environment for girls).</li>
-                    <li><strong>Check-in / Check-out:</strong> Check-in: 02:00 PM | Check-out: 10:00 AM next day.</li>
-                    <li>Ramitey Dara Viewpoint & Reshi River banks.</li>
-                </ul>
-            </div>
-            <div class="detail-box">
-                <strong>🍴 Meals & Lodging</strong>
-                Breakfast at Icche Gaon; Lunch, Snacks, & Dinner at Reshikhola.
-            </div>
-        </div>
+    <div class="card accent avoid">
+      <h3>HYDERABAD · Metro Inn, Secunderabad</h3>
+      <p><b>Address:</b> Opposite Rathifile Bus Stand, near Secunderabad East Metro Station, Pillar No. C1163, near Secunderabad Railway Station, Hyderabad.</p>
+      <p><b>Phone:</b> +91 9056 9056 45</p>
+      <p><b>Location advantage:</b> very close to Secunderabad Railway Station and Metro, reducing local transfer cost.</p>
+      <p><b>Current online rate signal:</b> station-area rates vary widely; current listings show discounted rooms around the ₹1,600–₹2,200 range before/after taxes depending on date and offer.</p>
+      <p><b>Recommended booking:</b> call directly and request the lowest non-breakfast room for 3 adults; compare the direct quote against current online offers.</p>
+      <p><a href="https://www.metroinn.in/contact">Hotel contact page</a> · <a href="https://www.metroinn.in/">Hotel website</a></p>
+    </div>
+  </div>
+
+  <h3>Backup hotel options</h3>
+  <table>
+    <thead><tr><th>City</th><th>Property</th><th>Contact / address</th><th>Planning note</th></tr></thead>
+    <tbody>
+      <tr><td>Vizag</td><td>Hotel Lakshmi Paradise</td><td>+91 99664 22477 · +91 99669 12441 · +91 89127 38090<br>31-1-2, South Jail Road, near Vivekananda Statue, Allipuram, Visakhapatnam 530004</td><td>Direct hotel contact; compare room quote.</td></tr>
+      <tr><td>Vizag</td><td>Northway Hotel</td><td>+91 73311 55187 · 0891 2535999<br>Daba Gardens Main Road, Beside BSNL Office, Visakhapatnam 530020</td><td>Budget-oriented central option.</td></tr>
+      <tr><td>Araku</td><td>Ushodaya Resorts</td><td>+91 94411 96111 / +91 94911 93111 / +91 94417 92227<br>Near Padmapuram Gardens</td><td>Published tariff is materially higher; use only if cheaper rooms are unavailable.</td></tr>
+      <tr><td>Hyderabad</td><td>Hotel O / Metro Inn station-area listing</td><td>Opp. Rethifile Bus Stand, Secunderabad Railway Station, Pillar C1163</td><td>Use current online price only as a comparison; direct call first.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="note"><b>Hotel booking instruction:</b> ask each property for (1) total price for 3 adults, (2) one room vs two rooms, (3) taxes, (4) extra-bed charge, (5) check-in time, (6) cancellation policy, (7) hot water, (8) luggage storage and (9) whether dinner/breakfast is included.</div>
+
+  <div class="footer"><span>Hotel contact sheet · verify before payment</span><span>Page 7</span></div>
+</section>
+
+<section class="page pagebreak">
+  <h2>07 · Car Rental Services — Complete Contact Details</h2>
+
+  <div class="contact">
+    <div class="card purple avoid">
+      <h3>VIZAG · NM Thalli Travels</h3>
+      <p><b>Booking:</b> +91 95533 65999 · 24/7 booking line</p>
+      <p><b>Address:</b> Plot No. 4, Seethammadara Main Road, Visakhapatnam, Andhra Pradesh – 530013.</p>
+      <p><b>Vehicles:</b> Swift Dzire, Toyota Etios, Innova Crysta, Tempo Traveller and other vehicles.</p>
+      <p><b>Service:</b> Vizag local sightseeing, Araku package, airport transfer and outstation.</p>
+      <p><b>Fare method:</b> personalized quote; the company states that quotes can include fuel, driver bata and basic tolls, subject to the final itinerary.</p>
+      <p><a href="https://nmthallitravels.com/vehicle.php?id=swift">Vehicle / booking page</a></p>
     </div>
 
-    <!-- Day 3 -->
-    <div class="day-card" style="border-left-color: #facc15;">
-        <div class="day-title">
-            <h2>Day 3: Reshikhola to Padamchen via Rongli</h2>
-            <span class="route">Reshikhola ➔ Rongli ➔ Kuekhola Waterfalls ➔ Padamchen (40 km / 2.5 hrs)</span>
-        </div>
-        <p><strong>Detailed Timing Adjusted Roadmap:</strong> 08:00 AM - Breakfast and check-out. 09:30 AM - Reach Rongli Market for inner-line permit processing (Driver assists with documentation). 11:30 AM - Depart from Rongli through Pangolakha Wildlife Sanctuary. 12:30 PM - Stop at Kuekhola Waterfalls. 02:00 PM - Arrival at Padamchen, check-in, and rest. 07:30 PM - Dinner.</p>
-        <div class="details-grid">
-            <div class="detail-box">
-                <strong>📍 Highlights & Accommodation</strong>
-                <ul class="highlight-list">
-                    <li><strong>Hotel/Homestay:</strong> Silk Route Valley Resort / Padamchen Retreat (Contact: +91-9932155443 / Secure homestay managed by local families, secure compound, continuous hot water supply, bottled drinking water provided).</li>
-                    <li><strong>Check-in / Check-out:</strong> Check-in: 02:00 PM | Check-out: 09:00 AM next day.</li>
-                    <li>Rongli Permit Office & Kuekhola Waterfalls.</li>
-                </ul>
-            </div>
-            <div class="detail-box">
-                <strong>🍴 Meals & Lodging</strong>
-                Breakfast, Lunch, Evening Snacks, & Dinner at Padamchen Homestay.
-            </div>
-        </div>
+    <div class="card teal avoid">
+      <h3>ARAKU · ArakuTrip Local Cab</h3>
+      <p><b>Call / WhatsApp:</b> +91 98549 75497</p>
+      <p><b>Email:</b> booking@arakutrip.in</p>
+      <p><b>Local sightseeing reference:</b> ₹3,000 for 1-day Side B and ₹4,000 for 1-day Side A; ₹7,000 full 2-day sightseeing, according to the current published page.</p>
+      <p><b>Vizag ↔ Araku:</b> published round-trip sedan benchmark around ₹6,000 for up to 4 passengers.</p>
+      <p><b>Budget instruction:</b> use rail for Vizag↔Araku; hire this service only for Araku sightseeing.</p>
+      <p><a href="https://arakutrip.in/araku-local-cab-service/">Araku local cab service</a></p>
     </div>
 
-    <!-- Day 4 -->
-    <div class="day-card" style="border-left-color: #f472b6;">
-        <div class="day-title">
-            <h2>Day 4: Padamchen to Zuluk & High Passes</h2>
-            <span class="route">Padamchen ➔ Zuluk ➔ Thambi ➔ Lungthung ➔ Nathang ➔ Kupup (60 km excursion)</span>
-        </div>
-        <p><strong>Detailed Timing Adjusted Roadmap:</strong> 06:00 AM - Early morning departure to beat high-altitude cloud cover. 07:30 AM - Thambi View Point (32-curve Zig-Zag Road). 09:00 AM - Lungthung & Tukla Valley. 10:30 AM - Old Baba Mandir visit. 12:00 PM - Kupup Lake (Elephant Lake) & highest golf course. 02:00 PM - Return drive to Zuluk homestay for late lunch. 07:00 PM - Warm dinner and acclimatization rest.</p>
-        <div class="details-grid">
-            <div class="detail-box">
-                <strong>📍 Highlights & Accommodation</strong>
-                <ul class="highlight-list">
-                    <li><strong>Hotel/Homestay:</strong> Zuluk Himalayan Crest Homestay (Contact: +91-9434111222 / Trusted safety record for all-women travelers, hot water bags/geysers available, proper insulated rooms).</li>
-                    <li><strong>Check-in / Check-out:</strong> Check-in: 02:30 PM | Check-out: 09:00 AM next day.</li>
-                    <li>Thambi View Point, Zig-Zag Road, & Old Baba Mandir.</li>
-                </ul>
-            </div>
-            <div class="detail-box">
-                <strong>🍴 Meals & Lodging</strong>
-                Breakfast, Lunch, Evening Snacks, & Dinner at Zuluk Homestay.
-            </div>
-        </div>
+    <div class="card accent avoid">
+      <h3>ARAKU · Appanna Car Travels</h3>
+      <p><b>Phone / WhatsApp:</b> +91 98493 39967</p>
+      <p><b>Location:</b> Araku Valley, Andhra Pradesh.</p>
+      <p><b>Services:</b> local tours, sightseeing, Borra Caves, Katiki Falls, coffee plantations, Tribal Museum, Padmapuram Gardens and other valley attractions.</p>
+      <p><b>Budget instruction:</b> request a written all-inclusive one-day quote for 3 adults, including fuel, driver, parking and waiting.</p>
+      <p><a href="https://appannacartravels.com/">Service contact page</a></p>
     </div>
 
-    <!-- Day 5 -->
-    <div class="day-card" style="border-left-color: #a855f7;">
-        <div class="day-title">
-            <h2>Day 5: Zuluk to Nathang Valley & Snow Point Excursion</h2>
-            <span class="route">Zuluk ➔ Nathang Valley ➔ Eagle's Nest / Snow Point ➔ Padamchen</span>
-        </div>
-        <p><strong>Detailed Timing Adjusted Roadmap:</strong> 07:00 AM - Breakfast and checkout from Zuluk. 08:30 AM - Drive up to Nathang Valley high-altitude plains. 10:30 AM - Visit Eagle's Nest Bunker viewpoint for expansive mountain vistas. 01:00 PM - Lunch at Nathang/Zuluk. 03:00 PM - Return drive descending safely back to Padamchen for a comfortable lower-altitude night stay. 07:30 PM - Dinner.</p>
-        <div class="details-grid">
-            <div class="detail-box">
-                <strong>📍 Highlights & Accommodation</strong>
-                <ul class="highlight-list">
-                    <li><strong>Hotel/Homestay:</strong> Silk Route Valley Resort, Padamchen (Contact: +91-9932155443 / Repeat stay for safer, lower altitude oxygen levels during sleep).</li>
-                    <li><strong>Check-in / Check-out:</strong> Check-in: 04:00 PM | Check-out: 09:00 AM next day.</li>
-                    <li>Nathang Valley & Eagle's Nest Bunker viewpoint.</li>
-                </ul>
-            </div>
-            <div class="detail-box">
-                <strong>🍴 Meals & Lodging</strong>
-                Breakfast, Lunch, Evening Snacks, & Dinner at Padamchen Homestay.
-            </div>
-        </div>
+    <div class="card pink avoid">
+      <h3>HYDERABAD · Hyderabad Sightseeing Tour</h3>
+      <p><b>Phone / WhatsApp:</b> +91 97037 27737</p>
+      <p><b>Service:</b> chauffeur-driven AC local and outstation car rentals.</p>
+      <p><b>Published starting point:</b> from around ₹900; final day rate depends on vehicle, hours and itinerary.</p>
+      <p><b>Recommended vehicle:</b> compact sedan for 3 adults; avoid Innova unless luggage/comfort requires it.</p>
+      <p><a href="https://hyderabadsightseeingtour.com/car-rental-in-hyderabad/">Hyderabad car rental page</a></p>
     </div>
+  </div>
 
-    <!-- Day 6 -->
-    <div class="day-card" style="border-left-color: #6366f1;">
-        <div class="day-title">
-            <h2>Day 6: Padamchen to NJP Station</h2>
-            <span class="route">Padamchen ➔ Rongli ➔ Rangpo ➔ NJP (100 km / 4.5 hrs)</span>
-        </div>
-        <p><strong>Detailed Timing Adjusted Roadmap:</strong> 08:00 AM - Breakfast and final checkout. 09:00 AM - Begin return journey via Rongli and Rangpo checkpost. 01:00 PM - Lunch break near Sevoke / Teesta River. 03:30 PM - Drop off at NJP Railway Station for evening train connections home.</p>
-        <div class="details-grid">
-            <div class="detail-box">
-                <strong>📍 Sights En Route</strong>
-                Teesta River Valley, Rangpo Checkpost, Coronation Bridge.
-            </div>
-            <div class="detail-box">
-                <strong>🍴 Meals</strong>
-                Breakfast at Homestay; Lunch on the way near Rangpo / Teesta Bazar.
-            </div>
-        </div>
+  <h3>Negotiation sheet for the trip</h3>
+  <table>
+    <thead><tr><th>City</th><th>Use</th><th>Target working amount</th><th>What must be included</th></tr></thead>
+    <tbody>
+      <tr><td>Vizag</td><td>Arrival + local sightseeing</td><td>₹1,800/day allowance</td><td>AC sedan, driver, fuel; confirm parking/tolls.</td></tr>
+      <tr><td>Araku</td><td>One full sightseeing day</td><td>₹3,000 target</td><td>AC sedan, driver, fuel, local sightseeing; confirm parking/waiting.</td></tr>
+      <tr><td>Hyderabad</td><td>One full heritage day</td><td>₹1,800/day allowance</td><td>AC sedan, driver, fuel; keep Metro/auto for shorter trips.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="success"><b>Best-value rule:</b> ask for a written WhatsApp quote before paying any advance. The message should state vehicle model, date, hours, kilometres, driver allowance, fuel, tolls, parking, interstate tax (if any), overtime and cancellation.</div>
+
+  <div class="footer"><span>Car rental contact sheet · obtain written quote</span><span>Page 8</span></div>
+</section>
+
+<section class="page pagebreak">
+  <h2>08 · Food Plan, Daily Spending & Very-Low-Budget Rules</h2>
+
+  <div class="grid">
+    <div class="card purple"><div class="label">Breakfast</div><div class="metric">₹25–₹50</div><p>Idli, vada, dosa, poori, upma + tea.</p></div>
+    <div class="card teal"><div class="label">Lunch</div><div class="metric">₹70–₹120</div><p>Vegetarian thali/meals or simple rice + curry.</p></div>
+    <div class="card accent"><div class="label">Dinner</div><div class="metric">₹70–₹120</div><p>Meals/biryani/roti + curry depending on city.</p></div>
+  </div>
+
+  <h3>Four-meal structure</h3>
+  <table>
+    <thead><tr><th>Meal</th><th>Target/person</th><th>3 adults/day</th><th>Budget practice</th></tr></thead>
+    <tbody>
+      <tr><td>Breakfast</td><td>₹30</td><td>₹90</td><td>Local tiffin shop, not hotel buffet.</td></tr>
+      <tr><td>Midday meal / snack</td><td>₹25</td><td>₹75</td><td>Fruit, tea, biscuit, local snack.</td></tr>
+      <tr><td>Lunch</td><td>₹40</td><td>₹120</td><td>Thali/simple meals.</td></tr>
+      <tr><td>Dinner</td><td>₹50</td><td>₹150</td><td>Local restaurant or economical biryani/meal.</td></tr>
+      <tr><th>Total target</th><th>₹145</th><th>₹435</th><th>Working ceiling can be kept at ₹1,200/day for all three, including drinks/snacks.</th></tr>
+    </tbody>
+  </table>
+
+  <h3>Day-by-day cash envelope</h3>
+  <table>
+    <thead><tr><th>Date</th><th>Recommended spend envelope for 3 adults</th><th>Main use</th></tr></thead>
+    <tbody>
+      <tr><td>15 Oct</td><td>₹600</td><td>Home meal + station snacks + water</td></tr>
+      <tr><td>16 Oct</td><td>₹1,800</td><td>Food + local movement + entry allowance</td></tr>
+      <tr><td>17 Oct</td><td>₹1,500</td><td>Araku train + food + local entry</td></tr>
+      <tr><td>18 Oct</td><td>₹2,000</td><td>Araku car day + food + entry</td></tr>
+      <tr><td>19 Oct</td><td>₹1,200</td><td>Food + Araku→Vizag rail + bus transfer buffer</td></tr>
+      <tr><td>20 Oct</td><td>₹1,800</td><td>Hyderabad old city + food</td></tr>
+      <tr><td>21 Oct</td><td>₹2,200</td><td>Car sightseeing + food + entry</td></tr>
+      <tr><td>22 Oct</td><td>₹1,800</td><td>Museum/culture + local transport + food</td></tr>
+      <tr><td>23 Oct</td><td>₹1,500</td><td>Final city half-day + train food</td></tr>
+      <tr><td>24 Oct</td><td>₹1,000</td><td>Railway meals/snacks</td></tr>
+      <tr><td>25 Oct</td><td>₹700</td><td>Arrival + last-mile buffer</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Four strict money-saving rules</h3>
+  <div class="twocol">
+    <ul>
+      <li>Never hire a premium SUV when a sedan is enough.</li>
+      <li>Use Metro/auto for short Hyderabad hops.</li>
+      <li>Buy water in larger bottles and refill where safe/appropriate.</li>
+      <li>Carry breakfast/snacks for long train sectors.</li>
+      <li>Do not pre-pay sightseeing packages that include attractions you do not need.</li>
+      <li>Confirm parking and driver-bata before the car starts.</li>
+      <li>Compare direct hotel quote with online discounted rate.</li>
+      <li>Keep a separate emergency envelope and do not treat it as spending money.</li>
+    </ul>
+  </div>
+
+  <div class="footer"><span>Food & spending controls</span><span>Page 9</span></div>
+</section>
+
+<section class="page pagebreak">
+  <h2>09 · Complete Budget Break-Up for 3 Adults</h2>
+
+  <table>
+    <thead><tr><th>Budget head</th><th class="right">Amount</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Kolkata → Visakhapatnam train, Sleeper</td><td class="right">₹1,515</td><td>Indicative current published fare; exact October fare/availability must be checked at booking.</td></tr><tr><td>Visakhapatnam ↔ Araku trains, Sleeper</td><td class="right">₹840</td><td>Current published route fare reference.</td></tr><tr><td>Visakhapatnam → Hyderabad luxury AC bus</td><td class="right">₹3,150</td><td>Budgeted near the lower published AC-sleeper range; exact fare varies by operator/date.</td></tr><tr><td>Hyderabad → Kolkata train, Sleeper</td><td class="right">₹2,130</td><td>Indicative current published fare reference.</td></tr><tr><td>Vizag local car / transfers</td><td class="right">₹1,800</td><td>Negotiation target for a compact sedan/half-day plus transfers.</td></tr><tr><td>Araku local sightseeing car</td><td class="right">₹3,000</td><td>1-day Side-B/local sightseeing benchmark; larger coverage may cost more.</td></tr><tr><td>Hyderabad local car</td><td class="right">₹1,800</td><td>Negotiation target for compact AC sedan with driver.</td></tr><tr><td>Hotel — Visakhapatnam, 2 nights</td><td class="right">₹3,000</td><td>Budget target for one triple/extra-bed arrangement; subject to occupancy/date.</td></tr><tr><td>Hotel — Araku, 2 nights</td><td class="right">₹3,200</td><td>Budget target; published room listings begin around ₹1,400–₹1,800/night.</td></tr><tr><td>Hotel — Hyderabad, 2 nights</td><td class="right">₹4,000</td><td>Budget target; station-area rates fluctuate substantially.</td></tr><tr><td>Food — 4 meals/day × 10 days × 3 adults</td><td class="right">₹12,000</td><td>₹100/person/meal average using local budget eateries/tiffin/thali.</td></tr><tr><td>Local public transport / autos / parking / entry fees</td><td class="right">₹3,500</td><td>Working allowance.</td></tr><tr><td>Drinking water / snacks / misc.</td><td class="right">₹1,800</td><td>Working allowance.</td></tr>
+      <tr><th>SUBTOTAL</th><th class="right">₹41,735</th><th>Working trip cost before contingency.</th></tr>
+      <tr><th>CONTINGENCY 10%</th><th class="right">₹4,174</th><th>Fare fluctuation, room tax, extra local rides, small overruns.</th></tr>
+      <tr><th>RECOMMENDED CASH / BOOKING CEILING</th><th class="right bigtotal">₹45,909</th><th>Approx. ₹15,303 per adult.</th></tr>
+    </tbody>
+  </table>
+
+  <h3>Visual allocation</h3>
+  <div class="budgetbar">
+    <div class="seg1" style="width:26%"></div>
+    <div class="seg2" style="width:27%"></div>
+    <div class="seg3" style="width:15%"></div>
+    <div class="seg4" style="width:12%"></div>
+    <div class="seg5" style="width:20%"></div>
+  </div>
+  <div class="legend">
+    <span><i class="dot" style="background:#6c2bd9"></i>Transport ~26%</span>
+    <span><i class="dot" style="background:#00a6a6"></i>Food ~27%</span>
+    <span><i class="dot" style="background:#ff7a18"></i>Hotels ~15%</span>
+    <span><i class="dot" style="background:#e83e8c"></i>Cars/local ~12%</span>
+    <span><i class="dot" style="background:#f5c84b"></i>Misc./contingency ~20%</span>
+  </div>
+
+  <h3>Per-person benchmark</h3>
+  <div class="grid">
+    <div class="card purple"><div class="label">Total ceiling</div><div class="metric">₹15,303</div><p>Approx. per adult for the entire trip.</p></div>
+    <div class="card teal"><div class="label">Core transport</div><div class="metric">~₹2,545</div><p>Rail + AC bus planning benchmark per adult.</p></div>
+    <div class="card accent"><div class="label">Food</div><div class="metric">~₹4,000</div><p>Working allowance per adult across 10 days.</p></div>
+  </div>
+
+  <div class="warning"><b>What can push the budget above ₹40,000:</b> 3A/2A train upgrades, premium Volvo/Scania bus seats, two hotel rooms instead of one triple/extra-bed arrangement, full-day Innova rentals, expensive tourist restaurants, festival/holiday hotel surcharges and last-minute booking.</div>
+
+  <div class="success"><b>Target:</b> If the group secures sleeper rail, an AC bus near ₹1,000–₹1,150/adult, economical triple/extra-bed rooms, and compact-sedan sightseeing, the working ceiling should remain close to the ₹45,909 planning level.</div>
+
+  <div class="footer"><span>Budget break-up · 3 adults</span><span>Page 10</span></div>
+</section>
+
+<section class="page pagebreak">
+  <h2>10 · Booking Checklist, Contacts & Source Register</h2>
+
+  <h3>Booking checklist</h3>
+  <div class="grid2">
+    <div class="card soft">
+      <h3>Rail</h3>
+      <ul class="checklist">
+        <li>Confirm Kolkata/Howrah → Visakhapatnam train for 15 Oct.</li>
+        <li>Book 3 Sleeper berths together where possible.</li>
+        <li>Confirm Vizag → Araku morning service for 17 Oct.</li>
+        <li>Confirm Araku → Vizag service for 19 Oct.</li>
+        <li>Confirm Hyderabad → Kolkata train for 23 Oct.</li>
+        <li>Keep printed/digital tickets and valid photo IDs.</li>
+      </ul>
     </div>
-
-    <!-- Booking Systems & Logistics Section -->
-    <div class="logistics-section">
-        <h2>🚗 Car Rental Services & Booking Procedures</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Service Name & Phone</th>
-                    <th>Vehicle Type</th>
-                    <th>Rate Specification</th>
-                    <th>Booking Process</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>North Bengal & Sikkim Tour Operators Association (Registered Pool)</strong><br><br>📞 Contact: +91-9563000999 / +91-3532555111</td>
-                    <td>Reserved Non-AC Bolero / Sumo (6 Seater + Luggage capacity)</td>
-                    <td>₹3,500 per day (Total ₹21,000 for 6 Days inclusive of fuel & driver allowance)</td>
-                    <td>Direct online booking via certified local agency portals or verified regional tour operators based in Siliguri/NJP with advance token payment of 25% via UPI/Bank Transfer.</td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="card soft">
+      <h3>Bus</h3>
+      <ul class="checklist">
+        <li>Book Vizag → Hyderabad overnight AC bus for 19 Oct.</li>
+        <li>Prefer 2+1 AC sleeper around ₹1,000–₹1,150/adult.</li>
+        <li>Confirm exact boarding point in Vizag.</li>
+        <li>Confirm exact Hyderabad drop point.</li>
+        <li>Check luggage allowance and cancellation rules.</li>
+      </ul>
     </div>
-
-    <!-- Budget Breakdown Section -->
-    <div class="budget-section">
-        <h2>💰 Detailed Budget Breakdown (For 6 People)</h2>
-        <p style="text-align: center; color: var(--text-muted);">Strictly planned to stay within ₹7,000 per head (Total Budget: ₹42,000)</p>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>Expense Description</th>
-                    <th>Calculation Basis</th>
-                    <th>Total Cost (₹)</th>
-                    <th>Cost Per Head (₹)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Reserved Transport</strong></td>
-                    <td>Non-AC Bolero / Sumo reserved for 6 days (NJP to NJP) via Registered Rental Services</td>
-                    <td>₹21,000</td>
-                    <td>₹3,500</td>
-                </tr>
-                <tr>
-                    <td><strong>Homestay Accommodations</strong></td>
-                    <td>5 Nights total secure stay (Double/Triple Sharing)</td>
-                    <td>₹9,000</td>
-                    <td>₹1,500</td>
-                </tr>
-                <tr>
-                    <td><strong>Fooding & Meals Package</strong></td>
-                    <td>All meals included in homestays (Breakfast, Lunch, Tea, Dinner)</td>
-                    <td>₹7,500</td>
-                    <td>₹1,250</td>
-                </tr>
-                <tr>
-                    <td><strong>Permits & Vehicle Passes</strong></td>
-                    <td>Rongli Silk Route entry permits & environmental fees</td>
-                    <td>₹1,500</td>
-                    <td>₹250</td>
-                </tr>
-                <tr>
-                    <td><strong>Buffer & Miscellaneous</strong></td>
-                    <td>Parking, driver tips, & emergency buffer</td>
-                    <td>₹3,000</td>
-                    <td>₹500</td>
-                </tr>
-                <tr class="total-row">
-                    <td>GRAND TOTAL</td>
-                    <td>All-Inclusive Per Person Target</td>
-                    <td>₹42,000</td>
-                    <td>₹7,000</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="info-note">
-            📌 <strong>Hotel Booking Systems & Safety Process:</strong>
-            <ul>
-                <li><strong>Booking Process:</strong> Homestays are booked directly through verified community tourism networks or trusted aggregators specializing in offbeat Sikkim circuits with a 30% advance deposit. All chosen properties feature verified host families and secure environments tailored for women travelers.</li>
-                <li><strong>Documents Required:</strong> 5–6 passport-size photographs per head and original Voter ID / Passport for Rongli Silk Route permits.</li>
-                <li><strong>High Altitude Advisory:</strong> High passes (Nathang, Lungthung, Kupup) exceed 12,000 ft. Carry heavy woolens, camphor, and altitude sickness medication.</li>
-            </ul>
-        </div>
+    <div class="card soft">
+      <h3>Hotels</h3>
+      <ul class="checklist">
+        <li>Ask for 3-adult occupancy in one room first.</li>
+        <li>Get tax-inclusive total in writing.</li>
+        <li>Confirm check-in/check-out and early luggage drop.</li>
+        <li>Confirm cancellation and advance policy.</li>
+        <li>Prefer railway-station/Metro-accessible properties.</li>
+      </ul>
     </div>
+    <div class="card soft">
+      <h3>Cars</h3>
+      <ul class="checklist">
+        <li>Get vehicle model and registration/driver details.</li>
+        <li>Confirm fuel, toll, parking, driver bata and overtime.</li>
+        <li>Ask for total package price on WhatsApp.</li>
+        <li>Avoid paying 100% before receiving written confirmation.</li>
+      </ul>
+    </div>
+  </div>
 
-</div>
+  <h3>Primary contacts at a glance</h3>
+  <table>
+    <thead><tr><th>Service</th><th>Contact</th><th>Use</th></tr></thead>
+    <tbody>
+      <tr><td>Hotel Akshaya, Vizag</td><td>+91 91778 92359 · +91 89125 33188<br>reserve@hotelakshaya.in</td><td>Vizag accommodation</td></tr>
+      <tr><td>Akshaya Inn, Araku</td><td>+91 63049 79788</td><td>Araku accommodation</td></tr>
+      <tr><td>Metro Inn, Secunderabad</td><td>+91 9056 9056 45</td><td>Hyderabad accommodation</td></tr>
+      <tr><td>NM Thalli Travels, Vizag</td><td>+91 95533 65999</td><td>Vizag / Araku car</td></tr>
+      <tr><td>ArakuTrip</td><td>+91 98549 75497 · booking@arakutrip.in</td><td>Araku local cab</td></tr>
+      <tr><td>Appanna Car Travels</td><td>+91 98493 39967</td><td>Araku local cab</td></tr>
+      <tr><td>Hyderabad Sightseeing Tour</td><td>+91 97037 27737</td><td>Hyderabad car</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Research/source register</h3>
+  <div class="source">
+    <p><b>Rail fares/timetables:</b> <a href="https://www.ixigo.com/by-train-rail/kolkata-to-vishakhapatnam-by-train">https://www.ixigo.com/by-train-rail/kolkata-to-vishakhapatnam-by-train</a> · <a href="https://erail.in/trains-between-stations/visakhapatnam-VSKP/araku-ARK">https://erail.in/trains-between-stations/visakhapatnam-VSKP/araku-ARK</a> · <a href="https://erail.in/trains-between-stations/araku-ARK/visakhapatnam-VSKP">https://erail.in/trains-between-stations/araku-ARK/visakhapatnam-VSKP</a> · <a href="https://www.ixigo.com/by-train-rail/hyderabad-to-kolkata-by-train">https://www.ixigo.com/by-train-rail/hyderabad-to-kolkata-by-train</a></p>
+    <p><b>AC bus fares:</b> <a href="https://www.abhibus.com/bus-booking/ac-buses-from-visakhapatnam-hyderabad-ticket-booking">https://www.abhibus.com/bus-booking/ac-buses-from-visakhapatnam-hyderabad-ticket-booking</a> · <a href="https://www.redbus.in/bus-tickets/visakhapatnam-to-hyderabad">https://www.redbus.in/bus-tickets/visakhapatnam-to-hyderabad</a></p>
+    <p><b>APSRTC Vizag tourist buses:</b> <a href="https://www.apsrtc.ap.gov.in/T_Visakhapatnam.php">https://www.apsrtc.ap.gov.in/T_Visakhapatnam.php</a></p>
+    <p><b>Hotels:</b> <a href="https://hotelakshaya.in/rooms.html">https://hotelakshaya.in/rooms.html</a> · <a href="https://hotelakshaya.in/contacts-Hotel-Akshaya-visakhapatnam.html">https://hotelakshaya.in/contacts-Hotel-Akshaya-visakhapatnam.html</a> · <a href="https://araku-valley.com/our-rooms/">https://araku-valley.com/our-rooms/</a> · <a href="https://www.google.co.in/travel/hotels/entity/ChoIv4TVvODl8oDbARoNL2cvMTFoMDBjX2YxNhAB">https://www.google.co.in/travel/hotels/entity/ChoIv4TVvODl8oDbARoNL2cvMTFoMDBjX2YxNhAB</a> · <a href="https://www.metroinn.in/">https://www.metroinn.in/</a> · <a href="https://www.metroinn.in/contact">https://www.metroinn.in/contact</a></p>
+    <p><b>Cars:</b> <a href="https://nmthallitravels.com/vehicle.php?id=swift">https://nmthallitravels.com/vehicle.php?id=swift</a> · <a href="https://arakutrip.in/araku-local-cab-service/">https://arakutrip.in/araku-local-cab-service/</a> · <a href="https://appannacartravels.com/">https://appannacartravels.com/</a> · <a href="https://hyderabadsightseeingtour.com/car-rental-in-hyderabad/">https://hyderabadsightseeingtour.com/car-rental-in-hyderabad/</a></p>
+  </div>
+
+  <div class="note"><b>Fare verification rule:</b> because the journey is in October 2026, re-check every train, bus and hotel quote immediately before payment. The document intentionally distinguishes published reference prices from the final bookable amount.</div>
+
+  <div class="footer"><span>End of detailed tour plan · 15–25 Oct 2026</span><span>Page 11</span></div>
+</section>
 
 </body>
 </html>
